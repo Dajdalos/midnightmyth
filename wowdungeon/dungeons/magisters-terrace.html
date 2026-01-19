@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magisters' Terrace - Midnight Dungeon Guide</title>
+    <meta name="description" content="Boss mechanics and trash guide for Magisters' Terrace M+">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🌙</div>
+                <div class="logo-text">
+                    <h1>Midnight Dungeon Guide</h1>
+                    <span>Season 2 M+ Reference</span>
+                </div>
+            </a>
+            <a href="../index.html" class="nav-home">← All Dungeons</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dungeon-header">
+            <h2>✨ Magisters' Terrace</h2>
+            <p class="subtitle">Isle of Quel'Danas • 4 Bosses • 30 min timer</p>
+        </section>
+
+        <!-- Bosses Section -->
+        <section class="bosses-section">
+            <h3 class="section-title">Boss Encounters</h3>
+
+            <!-- Boss 1 -->
+            <div class="boss-card active">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">1</span>
+                    <h3>Selin Fireheart</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Fel Explosion <span class="role-tag all">All</span></h4>
+                        <p>Heavy AoE when boss drains a crystal. Kill Fel Crystals before he reaches them.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Drain Life <span class="role-tag healer">Healer</span></h4>
+                        <p>Channels on random player, healing himself. Interrupt or dispel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 2 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">2</span>
+                    <h3>Vexallus</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Pure Energy <span class="role-tag dps">DPS</span></h4>
+                        <p>Spawns energy sparks. Kill them and absorb their energy (gives damage buff + DoT).</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Overload <span class="role-tag healer">Healer</span></h4>
+                        <p>Massive damage if too many stacks. Keep players healed through the DoT.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 3 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">3</span>
+                    <h3>Priestess Delrissa</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Council Fight <span class="role-tag all">All</span></h4>
+                        <p>Fight against Delrissa + 4 random adds. CC and focus priority targets.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Flash Heal <span class="role-tag dps">DPS</span></h4>
+                        <p>Interrupt her heals! She will heal herself and allies.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Adds Priority <span class="role-tag all">All</span></h4>
+                        <p>Kill order varies by comp. Generally: Healer > Mage > Rogue > Others > Delrissa last.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 4 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">4</span>
+                    <h3>Kael'thas Sunstrider</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Pyroblast <span class="role-tag all">All</span></h4>
+                        <p>MUST interrupt. Deals massive damage if it goes off.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Flamestrike <span class="role-tag all">All</span></h4>
+                        <p>Large fire zone - move out immediately.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Phoenix <span class="role-tag dps">DPS</span></h4>
+                        <p>Kill the Phoenix, then kill the egg before it respawns!</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Gravity Lapse <span class="role-tag all">All</span></h4>
+                        <p>Everyone floats! Avoid the orbs while airborne and wait it out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" style="margin-top: 3rem;">
+            <h3 class="section-title">Notable Trash</h3>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4>Sunblade Mage Guard</h4>
+                    <p>Interrupt <strong>Glaive Throw</strong> - hits hard on random targets.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Sunblade Warlock</h4>
+                    <p>Interrupt <strong>Incinerate</strong>. Also summons imps - cleave them down.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Coilskar Witch</h4>
+                    <p><strong>Forked Lightning</strong> is nasty. Interrupt or spread out.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Ethereum Smuggler</h4>
+                    <p>Can stealth and ambush. Watch your backs in hallways.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <div class="tips-box">
+            <h4>💡 Quick Tips</h4>
+            <ul>
+                <li>Use Bloodlust on Kael'thas - fight has a lot going on</li>
+                <li>Priestess Delrissa is the hardest boss - save cooldowns</li>
+                <li>Many trash packs can be skipped with careful pulls</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Guild Dungeon Resource • Midnight Season 2</p>
+    </footer>
+
+    <script>
+        function toggleBoss(header) {
+            const card = header.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

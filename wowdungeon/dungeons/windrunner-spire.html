@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windrunner Spire - Midnight Dungeon Guide</title>
+    <meta name="description"
+        content="Complete boss mechanics and trash guide for Windrunner Spire M+ - Midnight Season 1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🌙</div>
+                <div class="logo-text">
+                    <h1>Midnight Dungeon Guide</h1>
+                    <span>Season 1 M+ Reference</span>
+                </div>
+            </a>
+            <a href="../index.html" class="nav-home">← All Dungeons</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dungeon-header">
+            <h2>🏰 Windrunner Spire</h2>
+            <p class="subtitle">Quel'Thalas • 4 Boss • 35 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_nullifydisease.jpg"
+                        class="spell-icon" alt=""><strong>Poison dispels</strong> — Elengedhetetlen a méreg
+                    debuffok kezeléséhez a dungeonban</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_rogue_rupture.jpg"
+                        class="spell-icon" alt=""><strong>Bleed removal</strong> — Módszerek a vérezés eltávolítására az
+                    Axe
+                    Throwers-ből és más mobokból</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_strangulate.jpg"
+                        class="spell-icon" alt=""><strong>Grips/Knockbacks</strong> — Hasznos a statikus
+                    trash packek és casterek kezeléséhez</li>
+            </ul>
+        </section>
+
+        <!-- Bosses Section -->
+        <section class="bosses-section">
+            <h3 class="section-title">Boss Encounters</h3>
+
+            <!-- Boss 1: Emberdawn -->
+            <div class="boss-card active">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">1</span>
+                    <h3>Emberdawn</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1263239-emberdawn.jpg"
+                        class="boss-portrait" alt="Emberdawn - Dragonhawk Boss">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Egy célpontú
+                        sárkány sólyom főellenség, nincsenek addok. Meglehetősen egyszerű bemelegítő harc.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warlock_burningembers.jpg"
+                                    class="spell-icon" alt="">Flaming Updraft <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>6 másodpercre tűz DoT-ot alkalmaz egy játékosra. Lejárta után <strong>tűz
+                                tócsa</strong> marad a földön, amely visszalöki a hozzáérő játékosokat. A tócsák
+                            alkalmanként <strong>tűzörvényeket</strong> lövellnek ki, amelyek 2 másodpercre megbénítják
+                            az érintetteket. A tócsákat
+                            a csatatér szélére kell vinni, és el kell kerülni őket.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_raptortalon_nightmare.jpg"
+                                    class="spell-icon" alt="">Searing Beak <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Fizikai tank buster plusz 8 másodperces tűz DoT. Szükség szerint használj védekező
+                            cooldownokat.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_evoker_firestorm.jpg"
+                                    class="spell-icon" alt="">Burning Gale <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>A lökéshullámok 16 másodpercig másodpercenként tűz sebzést okozva – magas HPS szükséges a
+                            Mythic+ kulcsokhoz. Ebben a fázisban
+                            a főellenség <strong>négy frontális tűzleheletet</strong> bocsát ki különböző irányokba,
+                            amelyeket el kell kerülni.</p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Boss 2: Derelict Duo -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">2</span>
+                    <h3>Derelict Duo</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/538825.jpg" class="boss-portrait"
+                        alt="Derelict Duo - Banshee and Abomination">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Két különálló célpont
+                        (Banshee és Abomination) független életerővel. Együtt kell megölni őket!</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_soulleech_2.jpg"
+                                    class="spell-icon" alt="">⚠️ Broken Bond <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p><strong>Kritikus mechanika:</strong> Az egyik főellenség megölése 50%-kal növeli a másik
+                            főellenség sebzését. A főellenségeket
+                            a lehető legközelebb kell megölni egymáshoz, hogy ne legyen túl nagy terhelés a csoportra.
+                    </div>
+
+                    <h5 style="color: var(--accent-blue); margin: 1.5rem 0 1rem; font-size: 1.1rem;">🔵 Kalis (Banshee)
+                        Képességek</h5>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_curseofmannoroth.jpg"
+                                    class="spell-icon" alt="">Curse of Darkness <span
+                                    class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>12 másodpercre megátkozza két játékost. Egy sötét lény a megátkozott játékosokra koncentrál,
+                            amíg az átok
+                            meg nem szűnik vagy le nem jár. Az átok mielőbbi megszüntetését részesítsd előnyben.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowbolt.jpg"
+                                    class="spell-icon" alt="">Shadowbolt <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p>A kár megelőzéséhez <strong>szakitani kell</strong> ezt a varázslatot.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_psychicscream.jpg"
+                                    class="spell-icon" alt="">Debilitating Shriek <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>2 másodpercenként árnyék AoE sebzés. Ezt a Latch mechanizmus szakítja meg (lásd alább).</p>
+                    </div>
+
+                    <h5 style="color: var(--success); margin: 1.5rem 0 1rem; font-size: 1.1rem;">🟢 Latch (Abomination)
+                        Képességek</h5>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_deathknight_deathchain.jpg"
+                                    class="spell-icon" alt="">Heaving Yank <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Amikor egy játékosra varázsol, <strong>Kalis mögött kell állnia</strong>, hogy elnyelje a
+                            hatást és
+                            megszakítsa Kalis gyengítő sikolyát. Ez a szinergia elengedhetetlen a túléléshez.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_creature_disease_02.jpg"
+                                    class="spell-icon" alt="">Splattering Spew <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>A játékosokra permetezi a fiolát, 10 másodpercig másodpercenként természeti kárt okozva.
+                            Növekvő
+                            tócsa keletkezik a szélein — területkezelést igényel.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_savageblow.jpg"
+                                    class="spell-icon" alt="">Bone Hack <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>75 másodpercenként fizikai tank buster. Használj védekező cooldownokat.</p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Boss 3: Commander Kroluk -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">3</span>
+                    <h3>Commander Kroluk</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1263243-commander-kroluk.jpg"
+                        class="boss-portrait" alt="Commander Kroluk - Horde Commander">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">A Régi Horda
+                        parancsnoka.
+                        Egycélpontos főellenség, aki 66% és 33% HP-nál harci csapatot hív segítségül.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_rampage.jpg"
+                                    class="spell-icon" alt="">Rampage <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>5 másodpercenként fizikai tankromboló. A harc során folyamatosan aktív védelmet kell
+                            fenntartani.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_heroicleap.jpg"
+                                    class="spell-icon" alt="">Reckless Leap <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Egy játékoshoz ugrik, nagy becsapódási területet hagyva maga után, amely fizikai kárt okoz és
+                            12 másodperces vérzést okoz a területen lévő játékosoknak. Gyorsan távozz a becsapódási
+                            területről.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_10_elementalcombinedfoozles_earth.jpg"
+                                    class="spell-icon" alt="">Falling Rubble <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A mennyezetről törmelék hullik le — a játékosoknak ki kell térniük az ütközési zónákból.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_golemthunderclap.jpg"
+                                    class="spell-icon" alt="">Intimidating Shout <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>A körön belül egyedül álló játékosokat megrémít. <strong>A játékosoknak át kell lépniük a
+                                köröket, hogy elkerüljék
+                                a félelmet.</strong> A megrémített játékosok 6 másodpercig árnyéksebzést is kapnak.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_bladestorm.jpg"
+                                    class="spell-icon" alt="">⚠️ Rallying Blow (66% & 33% HP) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A boss immunis lesz a sebzésre, egy játékosra koncentrál, és pengetámadást hajt végre. Ebben
+                            a fázisban
+                            háborús csapatot hív meg.
+                    </div>
+
+                    <h5 style="color: var(--danger); margin: 1.5rem 0 1rem; font-size: 1.1rem;">⚔️ War Party Kill
+                        Priority</h5>
+
+                    <div
+                        style="background: rgba(239, 83, 80, 0.1); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+                        <p style="color: var(--text-primary); margin-bottom: 0.5rem;"><img
+                                src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_chainlightning.jpg"
+                                class="spell-icon" alt=""><strong>1. Fantasmal
+                                Mystic</strong> — Legmagasabb prioritás! Chain Lightning-ot és tűz AoE robbanást
+                            varázsol.
+                            Azonnal
+                            meg kell ölni.
+                        <p style="color: var(--text-primary); margin-bottom: 0.5rem;"><img
+                                src="https://wow.zamimg.com/images/wow/icons/medium/inv_throwingaxe_06.jpg"
+                                class="spell-icon" alt=""><strong>2. Spectral Axe
+                                Throwers</strong> — Közepes prioritás. Vérzést okozó balták dobása.</p>
+                        <p style="color: var(--text-primary);"><img
+                                src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_charge.jpg"
+                                class="spell-icon" alt=""><strong>3. Grunts</strong> — Legkisebb prioritás. Chargol
+                            legkevésbé veszélyes.</p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Boss 4: The Restless Heart -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">4</span>
+                    <h3>The Restless Heart</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1263245-restless-heart.jpg"
+                        class="boss-portrait" alt="The Restless Heart - Windrunner Spirit">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">A Windrunner család
+                        gyászából született szellem.
+                        Végső főellenség – ez előtt a találkozás előtt nincs további ellenség.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_cyclone.jpg"
+                                    class="spell-icon" alt="">Squall Leap <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A boss ugrik, és másodpercenként természeti sebzés halmozódó debuffot alkalmaz. <strong>A
+                                halmozódásokat
+                                el kell távolítani</strong> az Arrow Rain knock-up segítségével.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_rapidkilling.jpg"
+                                    class="spell-icon" alt="">Arrow Rain <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Sok kis nyíl hullik le – a játékosoknak el kell kerülniük őket. A nyilak azonban
+                            felhasználhatók arra, hogy
+                            <strong>feldobd magad</strong>, ami eltávolítja a Squall Leap halmozódásokat és segít
+                            elkerülni a
+                            Billowing Windet.
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_bow_1h_felfireraid_d_01.jpg"
+                                    class="spell-icon" alt="">⚠️ Bullseye Wind Blast <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>20 yardos hatótávolságú nagy területi hatású nyíl, amely <strong>Billowing Wind</strong> nevű
+                            halálos hullámot bocsát ki. A
+                            nyíl által okozott felrepüléssel elkerülhető ez a halálos támadás.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_callstorm.jpg"
+                                    class="spell-icon" alt="">Bolt Gale <span class="role-tag dps">Targeted</span></h4>
+                        </div>
+                        <p>Frontális kúp támadás egy játékosra irányítva. A célzott játékosnak védekező cooldownt kell
+                            használnia és állva kell maradnia, míg a többiek kimozdulnak.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_soulleech.jpg"
+                                    class="spell-icon" alt="">Storming Soul Fonts <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>AoE tócsák maradnak a földön, amelyek sebzést okoznak, ha belépsz.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_shieldbreak.jpg"
+                                    class="spell-icon" alt="">Gush Strike <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Fizikai tank buster plusz knockback.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_markedfordeath.jpg"
+                                    class="spell-icon" alt="">Gushot <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Gush Strike után nyolc yardos AoE-ket lő ki az aréna körül. <strong>Helyezd ezeket az AoE-ket
+                                a Storming Soul Fonts-ra, hogy megtisztítsd őket.</strong> Tisztítás után gömbök
+                            repülnek ki,
+                            amelyeket a játékosoknak el kell kerülniük.</p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" style="margin-top: 3rem;">
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Boss 1 előtt</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordbarrier.jpg"
+                            class="mob-icon" alt="">Spellguard Magus</h4>
+                    <p><strong>Spellguard's Protection</strong>-t varázsol, egy védő pajzsot, ami megakadályozza a
+                        sebzést. A tankoknak
+                        ki kell mozdítaniuk a mobokat ebből a pajzsból, hogy a DPS-ek sebzést tudjanak okozni.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_mount_fireravengodmount.jpg"
+                            class="mob-icon" alt="">Territorial Dragonhawk</h4>
+                    <p><strong>Fire Spit</strong>-et csatornáz, egy játékost célozva nagy sebzéssel, amíg meg nem
+                        szakítják.
+                        <strong>Szakítani kell</strong> a halálesetek megelőzéséhez.
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_spider.jpg"
+                            class="mob-icon" alt="">Creeping Spindle Webs</h4>
+                    <p>Rendszeresen méreg debuffokat alkalmaz. Kiemeli a méreg dispel szükségességét a csoportban.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_lynx.jpg"
+                            class="mob-icon" alt="">Apex Links</h4>
+                    <p>Több játékoshoz ugrik — <strong>szóródjatok szét</strong>, hogy elkerüljétek az átfedő ugrásokat
+                        és
+                        lánc sebzést.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_misc_herb_nightmarevine.jpg"
+                            class="mob-icon" alt="">Bloated Lasher</h4>
+                    <p>Halmozódó debuffot alkalmaz a tankokon, ami magas stacknél veszélyessé válik. Gyorsan öld meg,
+                        vagy
+                        használj kiting/immunitás mechanikákat a stackek csökkentéséhez.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Boss 1 után</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_rogue_deadlypoison.jpg"
+                            class="mob-icon" alt="">Ardent Cutthroats</h4>
+                    <p><strong>Poison Blades</strong>-t varázsol játékosokra — ezt <strong>szakítani kell</strong> a
+                        nagy
+                        veszély miatt. A méreg dispel tartalék, ha a hatás betalál.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg"
+                            class="mob-icon" alt="">Devoted Woolbringer</h4>
+                    <p>Pajzsot kap és <strong>Pulsing Shriek</strong>-et varázsol, egy party-wide AoE-t, ami megölheti a
+                        csoportot,
+                        ha nem szakítják meg. A DPS-eknek gyorsan le kell törniük a pajzsot és szakítani a castokat.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_frostfever.jpg"
+                            class="mob-icon" alt="">Flesh Behemoth</h4>
+                    <p><strong>Fed Spew:</strong> Sebző tócsákat ejt — mozdulj ki az elkerüléshez.<br><strong>Brutal
+                            Chop:</strong> Fizikai tank buster.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Boss 2 után</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_charge.jpg"
+                            class="mob-icon" alt="">Fanks Breaker</h4>
+                    <p>Játékosokra Charge-ol — kerüld el vagy csald oldalra, hogy kezelhető maradjon a keskeny folyosón.
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_resistanceisfutile.jpg"
+                            class="mob-icon" alt="">Swift Shot Archers</h4>
+                    <p>Nyilakat esőztet, AoE tócsákat létrehozva, amelyeket a játékosoknak el kell kerülniük.
+                        Véletlenszerű
+                        lövéseket is végez játékosokra, amelyeket meg lehet szakítani.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_throwingaxe_06.jpg"
+                            class="mob-icon" alt="">Spectral Axe Throwers</h4>
+                    <p>Balta dobás, ami vérzést okoz. Ezeket a castokat meg lehet állítani, vagy a mobokat el lehet
+                        húzni/lökni.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_chainlightning.jpg"
+                            class="mob-icon" alt="">Fantasmal Mystic</h4>
+                    <p><strong>Chain Lightning:</strong> Szakítani kell a party-wide sebzés
+                        elkerüléséhez.<br><strong>Flame
+                            Nova:</strong> Elkerülhetetlen party-wide tűz AoE — védekező cooldownok szükségesek
+                        Mythic+ alatt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <div class="tips-box">
+            <h4>💡 Gyors Tippek</h4>
+            <ul>
+                <li>Használj minden cooldownt és <strong>lustot az első nagy trash pullnál</strong>, hogy egyszerre
+                    összegyűjtsd
+                    az egész szobát</li>
+                <li>Gyakran szakíts — sok caster spell halálos, ha befejeződik</li>
+                <li>Szóródj szét, hogy elkerüld az ugrás átfedéseket és tócsa halmozódást (Apex Links, Splattering Spew)
+                </li>
+                <li>Tartsd meg a védekező cooldownokat a nehéz AoE fázisokra (Burning Gale, Flame Nova, Restless Heart
+                    frontal)
+                </li>
+                <li>Derelict Duo-nál kommunikálj az átok dispelekről és a Heaving Yank pozicionálásról</li>
+                <li>Restless Heart-nál használd a nyíl knock-upokat a stackek tisztításához és a Billowing Wind
+                    elkerüléséhez</li>
+                <li>A terület kezelése kulcsfontosságú — mozdítsd el a tócsákat vagy tisztítsd meg őket a Gushot-tal a
+                    Soul Fonts-on</li>
+            </ul>
+        </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Emberdawn</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Tűz tócsák, örvények, Burning
+                                Gale</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Kerüld a tócsákat, dodge-old a
+                                lélegzeteket</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Derelict Duo</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">2</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Broken Bond, Curse, Heaving Yank
+                                szinergia</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Egyszerre öld meg, Latch
+                                szakítja Kallust</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Commander Kroluk</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Rampage, Reckless Leap, Rallying
+                                Blow addok</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Öld: Mystic → Axe Throwers →
+                                Grunts</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">The Restless Heart</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Squall Leap stackek, Arrow Rain
+                                knock-upok</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Használd a nyilakat a stackek
+                                tisztításához</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
+    </footer>
+
+    <script>
+        function toggleBoss(header) {
+            const card = header.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

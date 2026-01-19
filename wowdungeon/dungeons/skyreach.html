@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyreach - Midnight Dungeon Guide</title>
+    <meta name="description" content="Boss mechanics and trash guide for Skyreach M+">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🌙</div>
+                <div class="logo-text">
+                    <h1>Midnight Dungeon Guide</h1>
+                    <span>Season 2 M+ Reference</span>
+                </div>
+            </a>
+            <a href="../index.html" class="nav-home">← All Dungeons</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dungeon-header">
+            <h2>🦅 Skyreach</h2>
+            <p class="subtitle">Spires of Arak • 4 Bosses • 30 min timer</p>
+        </section>
+
+        <!-- Bosses Section -->
+        <section class="bosses-section">
+            <h3 class="section-title">Boss Encounters</h3>
+
+            <!-- Boss 1 -->
+            <div class="boss-card active">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">1</span>
+                    <h3>Ranjit</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Windwall <span class="role-tag all">All</span></h4>
+                        <p>Creates rotating wind walls. Find the gap and stay in it as it rotates.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Four Winds <span class="role-tag all">All</span></h4>
+                        <p>Wind lanes across the arena. Stand between them to avoid damage.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Fan of Blades <span class="role-tag tank">Tank</span></h4>
+                        <p>Frontal cone. Face boss away from group.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 2 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">2</span>
+                    <h3>Araknath</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Energize <span class="role-tag dps">DPS</span></h4>
+                        <p>Boss gains energy from the beams. Step in beams to block his energy gain.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Smash <span class="role-tag tank">Tank</span></h4>
+                        <p>Heavy tank hit. Mitigate with cooldowns.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Burst <span class="role-tag healer">Healer</span></h4>
+                        <p>AoE burst at full energy. Prevent this by blocking beams!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 3 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">3</span>
+                    <h3>Rukhran</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Summon Solar Flare <span class="role-tag dps">DPS</span></h4>
+                        <p>Kill the add before it reaches a player or massive damage.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Pierce Armor <span class="role-tag tank">Tank</span></h4>
+                        <p>Stacking armor debuff. Swap tanks or use heavy mitigation.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Quills <span class="role-tag all">All</span></h4>
+                        <p>AoE feather attack. Spread and heal through.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 4 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">4</span>
+                    <h3>High Sage Viryx</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Lens Flare <span class="role-tag all">All</span></h4>
+                        <p>Laser beam follows a player. Kite it away from the group.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Solar Burst <span class="role-tag healer">Healer</span></h4>
+                        <p>Heavy AoE damage. Pop healing cooldowns.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Cast Down <span class="role-tag dps">DPS</span></h4>
+                        <p>Player gets picked up and thrown off the edge! Kill the add or they die.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Shield of Light <span class="role-tag dps">DPS</span></h4>
+                        <p>Bubble shield on boss. Break it quickly to continue damage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" style="margin-top: 3rem;">
+            <h3 class="section-title">Notable Trash</h3>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4>Driving Gale-Caller</h4>
+                    <p>Interrupt <strong>Dervish</strong> - spinning tornado does massive damage.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Adept of the Dawn</h4>
+                    <p>Interrupt <strong>Flash Heal</strong> or they heal back to full.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Solar Zealot</h4>
+                    <p><strong>Sunburst</strong> is an AoE explosion. Spread or interrupt.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Wind Edges</h4>
+                    <p>Watch for wind walls in the environment - they push you around.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <div class="tips-box">
+            <h4>💡 Quick Tips</h4>
+            <ul>
+                <li>Use Bloodlust on High Sage Viryx - Cast Down mechanic is brutal</li>
+                <li>Block beams on Araknath or the fight becomes impossible</li>
+                <li>The dungeon has lots of environmental hazards - stay aware</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Guild Dungeon Resource • Midnight Season 2</p>
+    </footer>
+
+    <script>
+        function toggleBoss(header) {
+            const card = header.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
