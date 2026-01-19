@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyreach - Midnight Dungeon Guide</title>
-    <meta name="description" content="Boss mechanics and trash guide for Skyreach M+">
+    <meta name="description"
+        content="Teljes boss mechanikák és trash guide a Skyreach M+ dungeonhoz - Midnight Season 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
@@ -18,7 +19,7 @@
                 <div class="logo-icon">🌙</div>
                 <div class="logo-text">
                     <h1>Midnight Dungeon Guide</h1>
-                    <span>Season 2 M+ Reference</span>
+                    <span>Season 1 M+ Reference</span>
                 </div>
             </a>
             <a href="../index.html" class="nav-home">← All Dungeons</a>
@@ -28,14 +29,29 @@
     <main class="main">
         <section class="dungeon-header">
             <h2>🦅 Skyreach</h2>
-            <p class="subtitle">Spires of Arak • 4 Bosses • 30 min timer</p>
+            <p class="subtitle">Spires of Arak • 4 Boss • 30 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_sealoffire.jpg"
+                        class="spell-icon" alt=""><strong>Fire resistance</strong> — Sok fire sebzés a dungeonban,
+                    különösen Araknath és Rukhran bossoknál</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_kick.jpg" class="spell-icon"
+                        alt=""><strong>Interrupts</strong> — Sok caster mob és Solar Zealot-ok</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_displacement.jpg"
+                        class="spell-icon" alt=""><strong>Knockback immunity</strong> — Hasznos Ranjitnél a Gale Surge
+                    ellen</li>
+            </ul>
         </section>
 
         <!-- Bosses Section -->
         <section class="bosses-section">
             <h3 class="section-title">Boss Encounters</h3>
 
-            <!-- Boss 1 -->
+            <!-- Boss 1: Ranjit -->
             <div class="boss-card active">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">1</span>
@@ -43,22 +59,55 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/455555-ranjit.jpg" class="boss-portrait"
+                        alt="Ranjit - Master of the Four Winds">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Chakram mester, aki
+                        veszélyes szélörvényeket hoz létre az arénában. Mozgás és pozicionálás kritikus!</p>
+
                     <div class="ability">
-                        <h4>Windwall <span class="role-tag all">All</span></h4>
-                        <p>Creates rotating wind walls. Find the gap and stay in it as it rotates.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_throwingknife_07.jpg"
+                                    class="spell-icon" alt="">Chakram Vortex <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Ranjit erős szél chakramot dob a platform közepére, nature sebzést okozva 10 yardon belül.
+                            A chakram tovább forog és <strong>szélörvényeket</strong> hoz létre, amelyek nature sebzést
+                            okoznak és <strong>feldobnak a levegőbe</strong>. Kerüld az örvényeket!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Four Winds <span class="role-tag all">All</span></h4>
-                        <p>Wind lanes across the arena. Stand between them to avoid damage.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_cyclone.jpg"
+                                    class="spell-icon" alt="">Gale Surge <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Ranjit erős szélrohammal támadja a célzott játékosokat, nature sebzést okozva és
+                            <strong>visszalökve</strong> őket. Vigyázz a platform szélén — leeshetsz!
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Fan of Blades <span class="role-tag tank">Tank</span></h4>
-                        <p>Frontal cone. Face boss away from group.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_fanofknives.jpg"
+                                    class="spell-icon" alt="">Fan of Blades <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>Ranjit éles pengéket dob minden irányba, fizikai sebzést és <strong>6 másodperces
+                                vérzést</strong> okozva (2 másodpercenként sebez). Party-wide damage!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_throwingchakrum.jpg"
+                                    class="spell-icon" alt="">Wind Chakram <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Ranjit szél chakramot dob maga elé, nature sebzést okozva az útjába kerülő játékosoknak.
+                            Kerüld az útvonalát!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 2 -->
+            <!-- Boss 2: Araknath -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">2</span>
@@ -66,22 +115,71 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/456746-araknath.jpg"
+                        class="boss-portrait" alt="Araknath - Construct of the Sun">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Solar construct egy
+                        hatalmas szolárium közepén. A fénysugarakat el kell fogni, különben healelik a bosst!</p>
+
                     <div class="ability">
-                        <h4>Energize <span class="role-tag dps">DPS</span></h4>
-                        <p>Boss gains energy from the beams. Step in beams to block his energy gain.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_soulburn.jpg"
+                                    class="spell-icon" alt="">⚠️ Energize & Light Ray <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Kisebb constructok fénysugarakat fókuszálnak Araknath-ra, <strong>0.5 másodpercenként 1%-ot
+                                healelve</strong>. <strong>Állj a fénysugarak útjába</strong> a heal megakadályozásához!
+                            A blokkolás fire sebzést okoz — váltogassátok a soakolást!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Smash <span class="role-tag tank">Tank</span></h4>
-                        <p>Heavy tank hit. Mitigate with cooldowns.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_fireball02.jpg"
+                                    class="spell-icon" alt="">Solar Infusion <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>A fénysugarak, amelyek Araknath-ot érik, solar energiával töltik, <strong>5%-kal növelve a
+                                Supernova sebzését</strong> stackelve. A Solar Infusion elhasználódik Supernova után.
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Burst <span class="role-tag healer">Healer</span></h4>
-                        <p>AoE burst at full energy. Prevent this by blocking beams!</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_burnout.jpg"
+                                    class="spell-icon" alt="">⚠️ Supernova <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>Araknath solar energia robbanást bocsát ki, <strong>fire sebzést okozva minden
+                                játékosnak</strong>. A sebzés nő minden Solar Infusion stackkel — <strong>blokkold a
+                                sugarakat</strong> a stackek minimalizálásához!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_decisivestrike.jpg"
+                                    class="spell-icon" alt="">Fiery Smash <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Araknath felemeli az egyik karját és lecsap azon az oldalon, <strong>nagy fire
+                                sebzést</strong>
+                            okozva a területen és <strong>100% fire damage taken</strong> növelést 1 percig (stackel).
+                            <strong>Kerüld a csapást!</strong>
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_flameshock.jpg"
+                                    class="spell-icon" alt="">Heat Exhaustion <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>A kisebb constructok hőt bocsátanak ki maguk előtt az energia fókuszálás után — fire sebzést
+                            okozva a területen. Kerüld!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 3 -->
+            <!-- Boss 3: Rukhran -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">3</span>
@@ -89,22 +187,68 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/434670-rukhran.jpg"
+                        class="boss-portrait" alt="Rukhran - Solar Bird">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Solar madár, ami
+                        Dawnwing addokat idéz. Line of sight mechanika a Searing Quills ellen!</p>
+
                     <div class="ability">
-                        <h4>Summon Solar Flare <span class="role-tag dps">DPS</span></h4>
-                        <p>Kill the add before it reaches a player or massive damage.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_selfdestruct.jpg"
+                                    class="spell-icon" alt="">⚠️ Searing Quills <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Rukhran égető tollakat bocsát ki, <strong>nagy fire sebzést okozva minden játékosnak a
+                                line of sight-jában</strong> az egész platformon. <strong>Bújj el oszlop mögé!</strong>
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Pierce Armor <span class="role-tag tank">Tank</span></h4>
-                        <p>Stacking armor debuff. Swap tanks or use heavy mitigation.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_summerfest_firespirit.jpg"
+                                    class="spell-icon" alt="">Sunbreak & Dawnwings <span class="role-tag dps">DPS</span>
+                            </h4>
+                        </div>
+                        <p>Rukhran solar energia robbanást hív le (fire sebzés mindenkinek) és <strong>Sunwing</strong>
+                            addot idéz. A Dawnwingek játékosokat <strong>fixálnak</strong> amíg megölöd őket.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Quills <span class="role-tag all">All</span></h4>
-                        <p>AoE feather attack. Spread and heal through.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_immolation.jpg"
+                                    class="spell-icon" alt="">⚠️ Blaze of Glory <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>A Dawnwingek megöléskor <strong>8 yardon belül felrobbannak</strong>, nagy fire sebzést
+                            okozva.
+                            Ha <strong>Smoldering Egg</strong>-et eltalál, az <strong>új Dawnwing-ként éled
+                                újra!</strong>
+                            Pozicionáld a robbanásokat távol a tojásoktól!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_druid_ferociousbite.jpg"
+                                    class="spell-icon" alt="">Burning Claws <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Nagy fire sebzésű tank hit. Használj defensiveket!</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_aspectoftheviper.jpg"
+                                    class="spell-icon" alt="">Screech <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Ha <strong>hosszabb ideig nincs közelharcos</strong> a meleeben, Rukhran Screech-et castol.
+                            Tartsd a tankot közel!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 4 -->
+            <!-- Boss 4: High Sage Viryx -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">4</span>
@@ -112,62 +256,174 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/435229-high-sage-viryx.jpg"
+                        class="boss-portrait" alt="High Sage Viryx">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Végső boss fókuszáló
+                        lencsével és Solar Zealot-okkal. Cast Down mechanika: megölhetik a játékost ledobással!</p>
+
                     <div class="ability">
-                        <h4>Lens Flare <span class="role-tag all">All</span></h4>
-                        <p>Laser beam follows a player. Kite it away from the group.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_soulburn.jpg"
+                                    class="spell-icon" alt="">⚠️ Cast Down <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Viryx <strong>Solar Zealot</strong>-ot idéz egy random játékos fölé, ami <strong>felkapja és
+                                megpróbálja ledobni a Skyreach széléről</strong>. <strong>Öld meg a Zealot-ot
+                                gyorsan!</strong> Ha sikerül ledobni a játékost = instant halál!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Solar Burst <span class="role-tag healer">Healer</span></h4>
-                        <p>Heavy AoE damage. Pop healing cooldowns.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_immolation.jpg"
+                                    class="spell-icon" alt="">Lens Flare <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Viryx a solar kristályoknak parancsol, hogy intenzív energiát fókuszáljanak egy játékosra,
+                            <strong>fire sebzést okozva 6 yardon belül</strong>. <strong>Blazing Ground</strong>
+                            tócsákat
+                            hagy, ami másodpercenként fire sebzést okoz. Mozdulj el és kerüld a tócsákat!
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Cast Down <span class="role-tag dps">DPS</span></h4>
-                        <p>Player gets picked up and thrown off the edge! Kill the add or they die.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_fireball02.jpg"
+                                    class="spell-icon" alt="">Scorching Ray <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>Közepes fire DoT a célzott játékosokon. Healer figyelmet igényel a Lens Flare-rel
+                            kombinálva.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Shield of Light <span class="role-tag dps">DPS</span></h4>
-                        <p>Bubble shield on boss. Break it quickly to continue damage.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_burnout.jpg"
+                                    class="spell-icon" alt="">Solar Burst <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Jelentős fire sebzésű tank hit a célpontra. Használj defensiveket!</p>
                     </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </section>
 
         <!-- Trash Section -->
         <section class="trash-section" style="margin-top: 3rem;">
-            <h3 class="section-title">Notable Trash</h3>
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Arakkoa Mobok</h4>
             <div class="trash-grid">
                 <div class="trash-card">
-                    <h4>Driving Gale-Caller</h4>
-                    <p>Interrupt <strong>Dervish</strong> - spinning tornado does massive damage.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_sealofwrath.jpg"
+                            class="mob-icon" alt="">Solar Zealot</h4>
+                    <p>Játékosokat felkap és megpróbálja ledobni a platformról. <strong>Azonnal öld meg</strong> mielőtt
+                        eléri a szélét!</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Adept of the Dawn</h4>
-                    <p>Interrupt <strong>Flash Heal</strong> or they heal back to full.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_arcane02.jpg"
+                            class="mob-icon" alt="">Skyreach Arcanist</h4>
+                    <p><strong>Arcane Bolt:</strong> Szakítható cast. <strong>Solar Storm:</strong> AoE sebzés
+                        a körzetben — mozdulj ki!</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Solar Zealot</h4>
-                    <p><strong>Sunburst</strong> is an AoE explosion. Spread or interrupt.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_shieldbash.jpg"
+                            class="mob-icon" alt="">Skyreach Shield Construct</h4>
+                    <p><strong>Protective Barrier:</strong> Pajzsot ad másoknak — prioritás: öld meg először vagy
+                        húzd el tőlük!</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Wind Edges</h4>
-                    <p>Watch for wind walls in the environment - they push you around.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_fireball02.jpg"
+                            class="mob-icon" alt="">Skyreach Sun Talon</h4>
+                    <p><strong>Fireball:</strong> Szakítható. <strong>Ignite:</strong> Fire DoT alkalmazás.
+                        Gyakori caster mob.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Solar Constructok</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_soulburn.jpg"
+                            class="mob-icon" alt="">Skyreach Raven Whisperer</h4>
+                    <p><strong>Summon Solar Flare:</strong> Addokat idéz. <strong>Blinding Radiance:</strong>
+                        Party-wide AoE.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_pet_phoenix.jpg" class="mob-icon"
+                            alt="">Diving Chakram Spinner</h4>
+                    <p><strong>Spinning Blade:</strong> Whirlwind típusú AoE köröttük — mozdulj el ha közel vagy!</p>
                 </div>
             </div>
         </section>
 
         <!-- Tips -->
         <div class="tips-box">
-            <h4>💡 Quick Tips</h4>
+            <h4>💡 Gyors Tippek</h4>
             <ul>
-                <li>Use Bloodlust on High Sage Viryx - Cast Down mechanic is brutal</li>
-                <li>Block beams on Araknath or the fight becomes impossible</li>
-                <li>The dungeon has lots of environmental hazards - stay aware</li>
+                <li>Ranjitnél vigyázz a <strong>platform szélén</strong> — a Gale Surge lelökhet!</li>
+                <li>Araknath-nál <strong>soakoljátok a fénysugarakat</strong> — különben healelik a bosst!</li>
+                <li>Araknath-nál <strong>kerüld a Fiery Smash-t</strong> — 100% fire damage taken stackel!</li>
+                <li>Rukhran-nál <strong>bújj oszlop mögé</strong> a Searing Quills alatt — LoS mechanika!</li>
+                <li>Rukhran-nál <strong>ne robbantsd a Dawnwing-eket tojások közelében</strong> — új addokat idéznek!
+                </li>
+                <li>Viryx-nél a <strong>Solar Zealot azonnal megölendő</strong> — különben ledobja a játékost!</li>
+                <li>Pozicionáld a <strong>Blazing Ground tócsákat</strong> a szoba szélére</li>
+                <li>Fire resistance általánosan hasznos az egész dungeonban</li>
             </ul>
         </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Ranjit</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Chakram Vortex, Gale Surge
+                                knockback</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Kerüld az örvényeket, vigyázz a
+                                szélre</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Araknath</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Light Ray soak, Supernova,
+                                Fiery Smash</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Blokkold a sugarakat, kerüld a
+                                smash-t</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Rukhran</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1 + addok</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Searing Quills (LoS), Blaze of
+                                Glory</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Bújj oszlop mögé, ne robbants
+                                tojásoknál</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">High Sage Viryx</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Cast Down (Zealot), Lens Flare
+                                tócsák</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Öld a Zealot-ot azonnal!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Guild Dungeon Resource • Midnight Season 2</p>
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
     </footer>
 
     <script>

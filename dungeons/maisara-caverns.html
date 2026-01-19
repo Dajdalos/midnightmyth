@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maisara Caverns - Midnight Dungeon Guide</title>
-    <meta name="description" content="Boss mechanics and trash guide for Maisara Caverns M+">
+    <meta name="description"
+        content="Teljes boss mechanikák és trash guide a Maisara Caverns M+ dungeonhoz - Midnight Season 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
@@ -18,7 +19,7 @@
                 <div class="logo-icon">🌙</div>
                 <div class="logo-text">
                     <h1>Midnight Dungeon Guide</h1>
-                    <span>Season 2 M+ Reference</span>
+                    <span>Season 1 M+ Reference</span>
                 </div>
             </a>
             <a href="../index.html" class="nav-home">← All Dungeons</a>
@@ -27,97 +28,429 @@
 
     <main class="main">
         <section class="dungeon-header">
-            <h2>🕳️ Maisara Caverns</h2>
-            <p class="subtitle">Underground Depths • 4 Bosses • 33 min timer</p>
+            <h2>🦇 Maisara Caverns</h2>
+            <p class="subtitle">Caverns • 3 Boss • 33 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_nullifydisease.jpg"
+                        class="spell-icon" alt=""><strong>Disease dispel</strong> — Elengedhetetlen az első bossnál
+                    (Infected Pinions)</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_strangulate.jpg"
+                        class="spell-icon" alt=""><strong>Grips/Knockbacks</strong> — Hasznos a statikus mobokhoz (Head
+                    Hunters)</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_kick.jpg" class="spell-icon"
+                        alt=""><strong>Interrupts</strong> — Sok fontos cast szakítandó</li>
+            </ul>
         </section>
 
         <!-- Bosses Section -->
         <section class="bosses-section">
             <h3 class="section-title">Boss Encounters</h3>
 
-            <!-- Boss 1 -->
+            <!-- Boss 1: Murroen and Necra -->
             <div class="boss-card active">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">1</span>
-                    <h3>Boss 1</h3>
+                    <h3>Murojin & Necra</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1261458-murojin.jpg"
+                        class="boss-portrait" alt="Murojin and Necra">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Duo fight — a HP-juk
+                        nincs összekapcsolva, de a lehető legközelebb kell megölni őket. Floor management kritikus!</p>
+
                     <div class="ability">
-                        <h4>Placeholder Ability <span class="role-tag all">All</span></h4>
-                        <p>Add your dungeon summary content here.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_bloodnova.jpg"
+                                    class="spell-icon" alt="">⚠️ Kill Order <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p>Ha az egyiket túl korán ölöd meg, a másik <strong>20% damage buffot</strong> kap — ez wipe!
+                            Ha Necra hal meg előbb, Murojin megpróbálja újraéleszteni. <strong>Közel egyszerre
+                                öld meg őket!</strong></p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_shieldcharge.jpg"
+                                    class="spell-icon" alt="">Blanking Spear <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Murojin a tank mögé ugrik, fizikai tank buster + 8 másodperces bleed. Használj defensiveket
+                            és <strong>pozicionálj fal mellett</strong> az ugrás távolságának csökkentéséhez.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg"
+                                    class="spell-icon" alt="">Infected Pinions <span
+                                    class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>Necra 30 másodperces <strong>disease</strong>-t alkalmaz az összes játékosra. Disease dispel
+                            <strong>erősen ajánlott</strong>!
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_freezingbreath.jpg"
+                                    class="spell-icon" alt="">Freezing Traps <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Murojin 5 csapdát dob a padlóra — kerüld el őket. Később a Carry and Swoop mechanikánál
+                            használatosak.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_druid_swoop.jpg"
+                                    class="spell-icon" alt="">⚠️ Carry and Swoop <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Necra egy játékost céloz, akinek <strong>freezing trapba kell állnia</strong>, hogy
+                            jégtömbben immúnis legyen. A boss lecsap és eltávolítja a tömböt, 5 másodperces stun + AoE
+                            tócsa marad. <strong>Floor management kulcsfontosságú!</strong></p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resistanceisfutile.jpg"
+                                    class="spell-icon" alt="">Barrage <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Murojin random irányba fordul és hosszú frontális multi-shot AoE-t castol. <strong>Kerüld a
+                                frontális kúpot!</strong></p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 2 -->
+            <!-- Boss 2: Vordaza -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">2</span>
-                    <h3>Boss 2</h3>
+                    <h3>Vordaza</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1261461-vordaza.jpg"
+                        class="boss-portrait" alt="Vordaza">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;"><strong>Pug
+                            killer!</strong> Komplex phantom mechanika és koordináció szükséges, különösen alacsonyabb
+                        kulcsokon.</p>
+
                     <div class="ability">
-                        <h4>Placeholder Ability <span class="role-tag all">All</span></h4>
-                        <p>Add your dungeon summary content here.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_lifedrain02.jpg"
+                                    class="spell-icon" alt="">Drain Soul <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Tank buster, ami 5 másodpercig másodpercenként HP-t szív. <strong>Nehéz tank damage</strong>
+                            — cooldown használat várható.</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_gathershadows.jpg"
+                                    class="spell-icon" alt="">⚠️ Rest Phantoms <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Négy phantom spawnolja az aréna sarkain — a tank és három DPS fixálódik. <strong>Párosítani
+                                és megérinteni kell</strong> a despawnoláshoz. Despawn AoE-t és tócsát okoz.
+                            <strong>Staggereld a despawnokat</strong> a kezelhető sebzésért!
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfury.jpg"
+                                    class="spell-icon" alt="">Unmake <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Forgó frontális kúp, amit dodgolni kell — ez átfedhet a phantomokkal. Mozgás és kiting
+                            szükséges egyszerre.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_necroticplague.jpg"
+                                    class="spell-icon" alt="">⚠️ Necrotic Convergence (50% HP) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>50% HP-nál a boss középre ugrik, <strong>absorb pajzsot</strong> kap és 1 percig pulzáló
+                            AoE-t végez (vagy amíg az absorbot letörik). Cooldownok és fókuszált DPS szükséges — közben
+                            <strong>konstans orbokat kell dodgolni</strong>.
+                        </p>
+                    </div>
+
+                    <div
+                        style="background: rgba(79, 195, 247, 0.1); border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                        <p style="color: var(--text-primary);"><strong>💡 Phantom Stratégia:</strong> Tankold az
+                            egyik oldalon a szoba szélén, hogy két phantom közelebb legyen és könnyebb legyen először
+                            párosítani. <strong>Ne tankolj középen</strong> — ez egyenlő távolságokat és nehéz
+                            staggerelést okoz!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 3 -->
+            <!-- Boss 3: Rak'tul -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">3</span>
-                    <h3>Boss 3</h3>
+                    <h3>Rak'tul, Vessel of Souls</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
-                    <div class="ability">
-                        <h4>Placeholder Ability <span class="role-tag all">All</span></h4>
-                        <p>Add your dungeon summary content here.</p>
-                    </div>
-                </div>
-            </div>
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1261462-raktul.jpg"
+                        class="boss-portrait" alt="Rak'tul, Vessel of Souls">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Végső boss totem
+                        mechanikával és knockback fázissal. Lust a knockback fázisban ajánlott.</p>
 
-            <!-- Boss 4 -->
-            <div class="boss-card">
-                <div class="boss-header" onclick="toggleBoss(this)">
-                    <span class="boss-number">4</span>
-                    <h3>Boss 4</h3>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="boss-content">
                     <div class="ability">
-                        <h4>Placeholder Ability <span class="role-tag all">All</span></h4>
-                        <p>Add your dungeon summary content here.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadesofdarkness.jpg"
+                                    class="spell-icon" alt="">Spirit Breaker <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Három magic tank hit: első kettő enyhe, a <strong>harmadik erős és knockbackel</strong>,
+                            tócsát hagyva. Tankold fal/pillér mellett a tócsák biztonságos elhelyezéséhez. Defensive a
+                            nehéz hiteknél.</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_soulleech_2.jpg"
+                                    class="spell-icon" alt="">⚠️ Crush Souls <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>3 játékost céloz egymás után — a boss leugrik és <strong>Soulbind Totemeket</strong> hagy.
+                            Lazán stackeljetek! A totemek 3 yardon belül ticking shadow damage-et okoznak —
+                            <strong>kerüld az átfedő totemeket!</strong>
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_psychichorrors.jpg"
+                                    class="spell-icon" alt="">⚠️ Soul Rending Roar (100 energia) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Hosszú cast, ami <strong>visszalöki a csoportot</strong> a gauntlet elejéhez. A fázis 45
+                            másodpercig tart — a boss <strong>stunnolva van</strong>. Ez az optimális
+                            <strong>bloodlust és cooldown ablak</strong>!
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_possession.jpg"
+                                    class="spell-icon" alt="">Malignant Souls <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Több add az útvonal mentén a knockback fázisban. <strong>CC-zd, kickeld vagy stunold</strong>
+                            őket speed buff-ért, ami gyorsabban visszavisz a bosshoz. Maximalizáld a CC-t ezeken az
+                            addokon!</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_auraofdarkness.jpg"
+                                    class="spell-icon" alt="">Partywide AoE <span class="role-tag healer">Healer</span>
+                            </h4>
+                        </div>
+                        <p>6 másodpercenként party-wide sebzés + konstans kis tócsák. Healerek készüljenek a rendszeres
+                            damage burstökre!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </section>
 
         <!-- Trash Section -->
         <section class="trash-section" style="margin-top: 3rem;">
-            <h3 class="section-title">Notable Trash</h3>
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Kezdő terület (Boss 1 előtt)</h4>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">⚠️ 8 foglyot kell kiszabadítani az első boss előtt
+                a bound NPC-ken csatornázással!</p>
             <div class="trash-grid">
                 <div class="trash-card">
-                    <h4>Dangerous Mob</h4>
-                    <p>Add your trash notes here.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_acid_01.jpg"
+                            class="mob-icon" alt="">Dread Soul Eater</h4>
+                    <p><strong>Rain of Toads:</strong> AoE körök, kerüld el. <strong>Chroic Wave:</strong> 3 játékost
+                        sebez + absorb pajzsot alkalmaz — a healereknek gyorsan át kell healnelni, nem szakítható.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_bloodnova.jpg"
+                            class="mob-icon" alt="">Frenzy Berserkers</h4>
+                    <p>Játékosoktól HP-t leeche-lnek. <strong>Ne húzz túl sokat</strong> cooldownok nélkül — megnyújtják
+                        a harcot.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_firebolt.jpg"
+                            class="mob-icon" alt="">Hex Guardians</h4>
+                    <p><strong>Ritual Firebrand:</strong> Magic-dispellelhető ticking fire DoT. Láng foltokat hagy.
+                        <strong>Magma Surge:</strong> Frontális kúp random játékosra — kerüld!
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_possession.jpg"
+                            class="mob-icon" alt="">Ritual Hexers</h4>
+                    <p>Fontos hex varázslat, amit <strong>KICKELNI KELL</strong> veszélyes hatások elkerüléséhez!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_spear_05.jpg" class="mob-icon"
+                            alt="">Head Hunters</h4>
+                    <p>Elugrik és lándzsát dob, többnyire statikus. <strong>Grip vagy knockback</strong> ajánlott.
+                        <strong>Hooking Snare:</strong> Kickeld, különben rángatnak!
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_misc_cauldron_nature.jpg"
+                            class="mob-icon" alt="">Cauldron Buff</h4>
+                    <p>Sátrakban található — csatornázz a cauldronon buff-ért mielőtt továbbmész. Ölj meg néhány mobot a
+                        sátorban a biztonságos megszerzéshez.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_rampage.jpg"
+                            class="mob-icon" alt="">Hulking Juggernaut</h4>
+                    <p><strong>Rending Gore:</strong> Tank hit + 10 másodperces bleed. <strong>Deafening Roar:</strong>
+                        Nehéz AoE damage — prioritás: öld korán a healer terhelés csökkentéséhez!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_mindshear.jpg"
+                            class="mob-icon" alt="">Umbil Shadow Binder</h4>
+                    <p><strong>Shrink:</strong> Csatornázás játékoson — <strong>szakítsd meg!</strong> Nagy AoE-t is
+                        idéz, amit kerülni kell.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Második terület (Boss 2 előtt)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_tremortotem.jpg"
+                            class="mob-icon" alt="">Restless Gnarled</h4>
+                    <p><strong>Staggering Blow:</strong> Nehéz fizikai tank hit. <strong>Ancestral Crush:</strong> AoE,
+                        kerüld el.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_ritualofsacrifice.jpg"
+                            class="mob-icon" alt="">Mini Boss Rogal</h4>
+                    <p><strong>Invoke Shadow:</strong> Magic debuff, dispellelhető. <strong>Ritual Sacrifice:</strong>
+                        Death's Grasp add spawnolja az oltáron — <strong>prioritás, azonnal öld!</strong> Shadow
+                        Whirlwind add is jön — kerüld.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_sword_61.jpg" class="mob-icon"
+                            alt="">Reanimated Warriors</h4>
+                    <p>Halál után megpróbálnak feltámadni — <strong>stunold, kickeld vagy CC-zd</strong> halálkor a
+                        respawn megakadályozásához!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_greaterblessingofkings.jpg"
+                            class="mob-icon" alt="">Bound Defender</h4>
+                    <p><strong>Soul Storms:</strong> Két körözű twister. <strong>Vigilant Defense:</strong> Frontális
+                        pajzs blokkolja a sebzést — kerüld az előrefelé állást a DPS fenntartásához.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_spectralsight.jpg"
+                            class="mob-icon" alt="">Ghost Mobok</h4>
+                    <p>Lineáris útvonalakon haladnak. Érintés rövid stunt okoz — <strong>ne húzz mobokat a szellem
+                            útvonalakba</strong> a veszélyes átfedések elkerüléséhez!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowbolt.jpg"
+                            class="mob-icon" alt="">Hollow Soul Render</h4>
+                    <p><strong>Shadow Frost Blast:</strong> Szakítható. <strong>Ren Souls:</strong> Groupwide damage.
+                        <strong>Frost Nova:</strong> AoE frost damage egy játékos körül — mozdulj el a csoporttól!
+                    </p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Végső Gauntlet (híd)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_argus_deathfog.jpg"
+                            class="mob-icon" alt="">Pattogó gömbök (zöld)</h4>
+                    <p>Hatalmas zöld magic golyók pattognak a híd közepén. <strong>Tankold a mobokat a híd
+                            szélein</strong>
+                        a hely maximalizálásához. Vigyázz, ne húzd be a Gloomwing Batokat!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowmend.jpg"
+                            class="mob-icon" alt="">Mini Boss Ziljan</h4>
+                    <p>A híd végén. <strong>Pulzáló group damage</strong> közelségen alapulva. Gyors kill szükséges,
+                        hogy a healer ne égjen ki a végső boss előtt!</p>
                 </div>
             </div>
         </section>
 
         <!-- Tips -->
         <div class="tips-box">
-            <h4>💡 Quick Tips</h4>
+            <h4>💡 Gyors Tippek</h4>
             <ul>
-                <li>Add your tips here</li>
+                <li>Kezd <strong>lustos nagy pullal</strong> az első területen</li>
+                <li>Szabadíts ki <strong>8 foglyot</strong> az első boss előtt a bound NPC-ken csatornázással</li>
+                <li>Murojin & Necránál a <strong>floor management kritikus</strong> — ne zsúfold tele az arénát</li>
+                <li>Vordazánál <strong>staggereld a phantom despawnokat</strong> — ne egyszerre!</li>
+                <li>Vordazánál <strong>ne tankolj középen</strong> — az egyik oldalon tankolj a phantom párosításhoz
+                </li>
+                <li>Rak'tulnál a <strong>knockback fázis az optimális lust ablak</strong> — a boss stunnolva van</li>
+                <li>A gauntlet hídon <strong>öld meg a trasht előbb</strong> a gömbök kerülésének megkönnyítéséhez</li>
+                <li>Reanimated Warriorokat <strong>stunold halálkor</strong> a respawn megakadályozásához</li>
             </ul>
         </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Murojin & Necra</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">2</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Carry and Swoop (trap), Infected
+                                Pinions (disease)</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Közel egyszerre öld, disease
+                                dispel</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Vordaza</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Rest Phantoms (párosítás),
+                                Necrotic Convergence (50%)</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Staggereld despawn, burst 50%
+                                alatt</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Rak'tul</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Crush Souls (totemek), Soul
+                                Rending Roar (knockback)</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Lust knockback fázisban, CC
+                                addok</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Guild Dungeon Resource • Midnight Season 2</p>
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
     </footer>
 
     <script>

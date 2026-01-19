@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pit of Saron - Midnight Dungeon Guide</title>
-    <meta name="description" content="Boss mechanics and trash guide for Pit of Saron M+">
+    <meta name="description"
+        content="Teljes boss mechanikák és trash guide a Pit of Saron M+ dungeonhoz - Midnight Season 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
@@ -18,7 +19,7 @@
                 <div class="logo-icon">🌙</div>
                 <div class="logo-text">
                     <h1>Midnight Dungeon Guide</h1>
-                    <span>Season 2 M+ Reference</span>
+                    <span>Season 1 M+ Reference</span>
                 </div>
             </a>
             <a href="../index.html" class="nav-home">← All Dungeons</a>
@@ -28,14 +29,28 @@
     <main class="main">
         <section class="dungeon-header">
             <h2>❄️ Pit of Saron</h2>
-            <p class="subtitle">Icecrown Citadel • 3 Bosses • 30 min timer</p>
+            <p class="subtitle">Icecrown Citadel • 3 Boss • 30 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_frost_arcticwinds.jpg"
+                        class="spell-icon" alt=""><strong>Frost resistance</strong> — Sok frost sebzés a dungeonban,
+                    különösen az utolsó bossnál</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_kick.jpg" class="spell-icon"
+                        alt=""><strong>Interrupts</strong> — Shadowbind és Death Bolt szakítása kritikus</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_nature_slow.jpg" class="spell-icon"
+                        alt=""><strong>Slows/CC</strong> — Add kontrolhoz az Army of the Dead fázisnál</li>
+            </ul>
         </section>
 
         <!-- Bosses Section -->
         <section class="bosses-section">
             <h3 class="section-title">Boss Encounters</h3>
 
-            <!-- Boss 1 -->
+            <!-- Boss 1: Forgemaster Garfrost -->
             <div class="boss-card active">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">1</span>
@@ -43,45 +58,135 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/147171-forgemaster-garfrost.jpg"
+                        class="boss-portrait" alt="Forgemaster Garfrost">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Hatalmas jéggel
+                        borított flesh giant. Saronite érc mechanika védelmül szolgál a Glacial Overload ellen.</p>
+
                     <div class="ability">
-                        <h4>Permafrost <span class="role-tag all">All</span></h4>
-                        <p>Stacking debuff that slows and damages. Hide behind saronite boulders to clear stacks.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_stonetablet_03.jpg"
+                                    class="spell-icon" alt="">Throw Saronite <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Garfrost saronite ércet dob játékosokra, fizikai sebzést okozva 10 yardon belül.
+                            Az érc <strong>Ore Chunks</strong>-ra robban megsemmisítéskor. Használd az ércet
+                            <strong>védelmül a Glacial Overload ellen!</strong>
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Throw Saronite <span class="role-tag all">All</span></h4>
-                        <p>Throws boulder at a player - dodge it, then use it for Permafrost protection.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+                                    class="spell-icon" alt="">⚠️ Orebreaker <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Pusztító buzogány csapás 5 yardon belül, nagy fizikai sebzést és <strong>8 másodperces
+                                stunt</strong> okoz. Ha a csapás saronite ércet talál, <strong>NEM stunol</strong>,
+                            helyette elpusztítja az ércet. Tank: állj érc mellett!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Deep Freeze <span class="role-tag healer">Healer</span></h4>
-                        <p>Stuns a player in ice block. Dispel or heal through.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_icestorm.jpg"
+                                    class="spell-icon" alt="">Cryostomp <span class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>Jeges toporzékolás, ami fizikai sebzést okoz és <strong>Cryoshards</strong>-ot küld ki.
+                            Ez <strong>50% frost damage taken</strong> növelést és 15% slowt okoz 12 másodpercig.
+                            Az összes saronite ércet is elpusztítja!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_glacier.jpg"
+                                    class="spell-icon" alt="">⚠️ Glacial Overload (100 Energia) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>100 energiánál Garfrost aktiválja a legközelebbi kovácsműhelyt, ami 3.5 másodpercig
+                            frost pulzálást okoz. 0.5 másodpercenként <strong>75% frost damage taken</strong>
+                            stacket ad 10 másodpercig. <strong>Saronite érc mögött bújj el védelemért!</strong></p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_creepingplague.jpg"
+                                    class="spell-icon" alt="">Saronite Sludge <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A szétzúzott saronite ártalmas anyagot szivárogtat — shadow sebzést okoz aki benne áll.
+                            Kerüld el a tócsákat!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 2 -->
+            <!-- Boss 2: Krick & Ick -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">2</span>
-                    <h3>Ick & Krick</h3>
+                    <h3>Krick & Ick</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/150208-krick.jpg" class="boss-portrait"
+                        alt="Krick and Ick">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Krick (gnóm) és Ick
+                        (construct) együtt harcol. Necrolink miatt a sebzést megosztják. Shades of Krick prioritás!</p>
+
                     <div class="ability">
-                        <h4>Poison Nova <span class="role-tag all">All</span></h4>
-                        <p>Run away when Krick yells! Massive AoE poison damage around them.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deadofnight.jpg"
+                                    class="spell-icon" alt="">Necrolink <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p>Krick összekapcsolja az életét Ick-kel — <strong>minden sebzést megosztanak</strong>.
+                            Bármelyiket sebezd, mindkettő sérül.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Pursuit <span class="role-tag dps">DPS</span></h4>
-                        <p>Ick chases a random player. Kite away - getting hit is nearly fatal.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_cleave.jpg"
+                                    class="spell-icon" alt="">Blight Smash <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Ick erős tank hit a primary target ellen. Használj defensiveket!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Explosive Barrage <span class="role-tag all">All</span></h4>
-                        <p>Mines spawn everywhere. Watch your feet and avoid the explosions.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadesofdarkness.jpg"
+                                    class="spell-icon" alt="">⚠️ Shade Shift <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Krick sötét energia robbanást bocsát ki (shadow sebzés minden játékosnak + 8 sec DoT)
+                            és rituális körhöz teleportál. <strong>Shades of Krick</strong> jelennek meg mellette.
+                            Prioritás: öld meg a shade-eket gyorsan!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_possession.jpg"
+                                    class="spell-icon" alt="">⚠️ Shadowbind & Death Bolt <span
+                                    class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p><strong>Shadowbind:</strong> Shade-ek sötét mágiát csatornáznak játékosra (shadow DoT + 35%
+                            slow). <strong>Death Bolt:</strong> Hatalmas shadow bolt. <strong>Mindkettőt szakítani
+                                kell!</strong> Ha a shade-ek 1 percig élnek: <strong>Shade Bomb</strong> robban, ami
+                            hatalmas party-wide sebzést okoz.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_fixated_state_yellow.jpg"
+                                    class="spell-icon" alt="">Get 'Em, Ick! (100 Energia) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Krick Ick tetejére teleportál és <strong>Lumbering Fixation</strong>-t rendel el. Ick
+                            egy játékost fixál és üldöz, közben <strong>Plague Globs</strong>-ot dob, ami
+                            <strong>Blight</strong> tócsákat hagy. A fixált játékos kiteeljen!
+                        </p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 3 -->
+            <!-- Boss 3: Scourgelord Tyrannus -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">3</span>
@@ -89,62 +194,187 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/432790-scourgelord-tyrannus-scourgelord-tyrannus-after-patch-6-0.jpg"
+                        class="boss-portrait" alt="Scourgelord Tyrannus">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Halállovag
+                        Rimefang frost sárkánnyal. Bone Pile mechanika és Army of the Dead fázis figyelmet igényel.</p>
+
                     <div class="ability">
-                        <h4>Overlord's Brand <span class="role-tag all">All</span></h4>
-                        <p>Links to a player - STOP DPS if branded. Damage to boss hurts branded player!</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_bloodboil.jpg"
+                                    class="spell-icon" alt="">Bone Infusion <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Tyrannus nekrotikus energiát tapos a földbe, ami <strong>Bone Piles</strong>-t
+                            <strong>Infused Bone Piles</strong>-ra változtat. A taposás shadow sebzést okoz
+                            mindenkinek + 8 másodperces DoT.
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Forceful Smash <span class="role-tag tank">Tank</span></h4>
-                        <p>Heavy frontal knockback. Position with back to wall or you'll fly off.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostblast.jpg"
+                                    class="spell-icon" alt="">Rime Blast (Rimefang) <span
+                                    class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Rimefang jeges robbanást lő, ami <strong>lefagyasztja a Bone Piles-t</strong>, amiket
+                            eltalál.
+                            Frost sebzést okoz a területen.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Hoarfrost <span class="role-tag all">All</span></h4>
-                        <p>Ice patches from Rimefang above. Move out of the frost zones.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathsembrace.jpg"
+                                    class="spell-icon" alt="">⚠️ Scourgelord's Brand <span
+                                    class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Megjelöli a tankot — növeli a <strong>Scourgelord's Reckoning</strong> sebzését.
+                            Tank cooldownok kellenek!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Unholy Power <span class="role-tag tank">Tank</span></h4>
-                        <p>Boss enrages and deals massive damage. Use major defensive cooldowns.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_strangulate.jpg"
+                                    class="spell-icon" alt="">Death's Grasp <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Tyrannus jelentős sebzést okoz célzott helyeken. Kerüld a jelölt területeket!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_arcticwinds.jpg"
+                                    class="spell-icon" alt="">Ice Barrage (Rimefang) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Rimefang jégzáport lő célzott helyekre — jelentős frost sebzés. Mozdulj ki a területből!</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_armyofthedead.jpg"
+                                    class="spell-icon" alt="">⚠️ Army of the Dead (100 Energia) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>100 energiánál Tyrannus <strong>holtakat támaszt fel</strong>. A minionok jelentős
+                            sebzést okoznak. AoE és CC szükséges a raj kezeléséhez!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </section>
 
         <!-- Trash Section -->
         <section class="trash-section" style="margin-top: 3rem;">
-            <h3 class="section-title">Notable Trash</h3>
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Scourge Mobok</h4>
             <div class="trash-grid">
                 <div class="trash-card">
-                    <h4>Fallen Warrior</h4>
-                    <p>These hit HARD. Tank needs to be ready with cooldowns.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_frost_frostarmor.jpg"
+                            class="mob-icon" alt="">Ymirjar Flamebearers</h4>
+                    <p><strong>Hellfire:</strong> Tűz AoE köröttük — kerüld el vagy öld meg gyorsan.
+                        <strong>Fireball:</strong> Szakítható cast.
+                    </p>
                 </div>
                 <div class="trash-card">
-                    <h4>Wrathbone Laborer</h4>
-                    <p><strong>Blinding Dirt</strong> disorients. Face them away from the group.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_colossussmash.jpg"
+                            class="mob-icon" alt="">Ymirjar Wrathbringers</h4>
+                    <p><strong>Blight:</strong> Tócsákat hagy — kerüld. <strong>Whirlwind:</strong> AoE spin,
+                        mozdulj el ha közel vagy.</p>
                 </div>
                 <div class="trash-card">
-                    <h4>The Gauntlet</h4>
-                    <p>After Ick/Krick - endless adds spawn. Keep running up, don't stop to fight!</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_deathcoil.jpg"
+                            class="mob-icon" alt="">Geist Mobok</h4>
+                    <p>Gyorsan mozgó undead mobok, amelyek játékosokra ugranak. Cleave őket le a nagyobb packokban.</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Ymirjar Skycaller</h4>
-                    <p>Interrupt <strong>Frostbolt</strong> and watch for their knockback.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_frostfever.jpg"
+                            class="mob-icon" alt="">Skeletal Slaves</h4>
+                    <p>Csontváz munkások a bányában. Megöléskor <strong>feltámadhatnak</strong> ha nincs CC.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Tunnel/Gauntlet</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_frost_glacier.jpg"
+                            class="mob-icon" alt="">Falling Icicles</h4>
+                    <p>A tunnel gauntletben <strong>jégcsapok zuhannak</strong> a mennyezetről. Figyelj a jelzésekre
+                        és mozdulj ki — nagy frost sebzést okoznak!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_frost_coldhearted.jpg"
+                            class="mob-icon" alt="">Frostbringer Patrol</h4>
+                    <p>Patrouillirozó mobok a tunnelben. <strong>Frost Nova</strong> AoE, ami slowol és sebez.
+                        Figyelj a pullingra a jégcsapok miatt!</p>
                 </div>
             </div>
         </section>
 
         <!-- Tips -->
         <div class="tips-box">
-            <h4>💡 Quick Tips</h4>
+            <h4>💡 Gyors Tippek</h4>
             <ul>
-                <li>Use Bloodlust on Tyrannus - the hardest boss</li>
-                <li>The gauntlet requires constant movement - don't stop!</li>
-                <li>Overlord's Brand is a wipe mechanic if DPS don't stop</li>
+                <li>Garfrostnál <strong>bújj saronite érc mögé</strong> a Glacial Overload alatt — 75% frost damage
+                    stack ellen véd</li>
+                <li>Garfrostnál a tank <strong>álljon érc mellett</strong>, hogy az Orebreaker ne stunoljon</li>
+                <li>Krick & Icknél <strong>prioritás a Shades of Krick</strong> megölése — 1 perc után felrobbannak!
+                </li>
+                <li>Krick & Icknél <strong>szakítsd Shadowbind és Death Bolt</strong> castokat a shade-ektől</li>
+                <li>Tyrannusnál figyelj a <strong>Bone Piles</strong>-ra — Rimefang lefagyasztja őket</li>
+                <li>Tyrannusnál <strong>Army of the Dead</strong> fázisnál AoE és CC kell a minionokhoz</li>
+                <li>A tunnel gauntletben <strong>jégcsapok zuhannak</strong> — figyelj a mennyezetre!</li>
+                <li>Frost resistance hasznos, különösen az utolsó két bossnál</li>
             </ul>
         </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Forgemaster Garfrost</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Glacial Overload (saronite
+                                védelem), Orebreaker stun</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Bújj érc mögé Overload alatt</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Krick & Ick</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">2 (linked)</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Shades of Krick (kill fast),
+                                Fixation kiting</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Öld a shade-eket, kick
+                                Shadowbind</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Scourgelord Tyrannus</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1 + sárkány</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Army of the Dead, Bone Piles,
+                                Brand</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">AoE/CC az Army alatt, kerüld
+                                Ice Barrage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Guild Dungeon Resource • Midnight Season 2</p>
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
     </footer>
 
     <script>

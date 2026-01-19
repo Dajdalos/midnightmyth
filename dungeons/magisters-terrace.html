@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magisters' Terrace - Midnight Dungeon Guide</title>
-    <meta name="description" content="Boss mechanics and trash guide for Magisters' Terrace M+">
+    <title>Magister's Terrace - Midnight Dungeon Guide</title>
+    <meta name="description"
+        content="Teljes boss mechanikák és trash guide a Magister's Terrace M+ dungeonhoz - Midnight Season 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
@@ -18,7 +19,7 @@
                 <div class="logo-icon">🌙</div>
                 <div class="logo-text">
                     <h1>Midnight Dungeon Guide</h1>
-                    <span>Season 2 M+ Reference</span>
+                    <span>Season 1 M+ Reference</span>
                 </div>
             </a>
             <a href="../index.html" class="nav-home">← All Dungeons</a>
@@ -27,139 +28,417 @@
 
     <main class="main">
         <section class="dungeon-header">
-            <h2>✨ Magisters' Terrace</h2>
-            <p class="subtitle">Isle of Quel'Danas • 4 Bosses • 30 min timer</p>
+            <h2>✨ Magister's Terrace</h2>
+            <p class="subtitle">Quel'Thalas • 4 Boss • 33 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_dispelmagic.jpg"
+                        class="spell-icon" alt=""><strong>Magic dispels</strong> — Sok magic debuff van a dungeonban
+                    (polymorph, shackles, stb.)</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_sealofvalor.jpg"
+                        class="spell-icon" alt=""><strong>Root/slow removal</strong> — Blessing of Freedom, Tiger's Lust
+                    típusú képességek ajánlottak</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_kick.jpg" class="spell-icon"
+                        alt=""><strong>Interrupts</strong> — Sok caster mob, sok kick szükséges</li>
+            </ul>
         </section>
 
         <!-- Bosses Section -->
         <section class="bosses-section">
             <h3 class="section-title">Boss Encounters</h3>
 
-            <!-- Boss 1 -->
+            <!-- Boss 1: Arcanotron Custos -->
             <div class="boss-card active">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">1</span>
-                    <h3>Selin Fireheart</h3>
+                    <h3>Arcanotron Custos</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1260122-arcanotron-custos.jpg"
+                        class="boss-portrait" alt="Arcanotron Custos">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Arcane alapú boss,
+                        sok padló menedzsmentet igényel. Energia gömbök soakolása kritikus.</p>
+
                     <div class="ability">
-                        <h4>Fel Explosion <span class="role-tag all">All</span></h4>
-                        <p>Heavy AoE when boss drains a crystal. Kill Fel Crystals before he reaches them.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcaneshock.jpg"
+                                    class="spell-icon" alt="">Repulsing Slam <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Magic tank buster plusz knockback. Használj defensiveket.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Drain Life <span class="role-tag healer">Healer</span></h4>
-                        <p>Channels on random player, healing himself. Interrupt or dispel.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcane04.jpg"
+                                    class="spell-icon" alt="">Arcane Expulsion <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Partywide magic sebzés plusz knockback. Tócsákat hagy a padlón, amiket el kell kerülni.</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_prismaticcloak.jpg"
+                                    class="spell-icon" alt="">Ethereal Shackles <span
+                                    class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>Groupwide dispellelhető magic debuff, ami lassít és 3 másodpercenként sebzést okoz.
+                            <strong>Dispelleld cooldownon!</strong>
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcanetorrent.jpg"
+                                    class="spell-icon" alt="">⚠️ Refueling Protocol <span
+                                    class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Minden 2. Arcane Expulsion után. A boss energia gömböket szív be, amiket a
+                            <strong>játékosoknak kell soakolni</strong>. Soakolás 3 másodperc sebzést okoz — oszd el
+                            egyenletesen! Ha a gömbök elérik a bosst, partywide sebzést és <strong>20% buff</strong>-ot
+                            kap — ez wipe magas kulcsokon. <strong>Tankolj fal mellett</strong>, hogy egy irányból ne
+                            jöjjenek gömbök!
+                        </p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 2 -->
+            <!-- Boss 2: Seranel Sunlash -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">2</span>
-                    <h3>Vexallus</h3>
+                    <h3>Seranel Sunlash</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1260123-seranel-sunlash.jpg"
+                        class="boss-portrait" alt="Seranel Sunlash">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Valószínűleg a
+                        <strong>legnehezebb boss</strong> Mythic+-on. Koordinált Runic Mark eltávolítás szükséges.
+                    </p>
+
                     <div class="ability">
-                        <h4>Pure Energy <span class="role-tag dps">DPS</span></h4>
-                        <p>Spawns energy sparks. Kill them and absorb their energy (gives damage buff + DoT).</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_rune.jpg"
+                                    class="spell-icon" alt="">Suppression Zone <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Zóna jelenik meg a földön, ami sebzést okoz érintéskor és <strong>pacify/silence</strong>-ol
+                            a benne állókat. De szükséges a Runic Mark eltávolításához!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Overload <span class="role-tag healer">Healer</span></h4>
-                        <p>Massive damage if too many stacks. Keep players healed through the DoT.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_soulburn.jpg"
+                                    class="spell-icon" alt="">⚠️ Runic Mark <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Magic DoT három játékoson — <strong>NEM dispellelhető</strong>, csak a Suppression Zone-ban
+                            állva távolítható el. Eltávolításkor: dodgolható rakéták indulnak és a party magic DoT-ot +
+                            3 másodperces slowt kap. <strong>Staggereld az eltávolítást</strong> — ne egyszerre
+                            távolítsátok el!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_silence.jpg"
+                                    class="spell-icon" alt="">⚠️ Vow of Silence <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Hosszú cast, ami <strong>silence/pacify</strong>-olja az összes játékost, aki NINCS a
+                            Suppression Zone-ban. A cast alatt <strong>állj be a zónába</strong> a silence
+                            elkerüléséhez!</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 3 -->
+            <!-- Boss 3: Gemellus -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">3</span>
-                    <h3>Priestess Delrissa</h3>
+                    <h3>Gemellus</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1260125-gemellus.jpg"
+                        class="boss-portrait" alt="Gemellus - Jellyfish Boss">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Medúza boss, ami
+                        klónokat spawnol. Spread cleave és DoT classok erősek itt.</p>
+
                     <div class="ability">
-                        <h4>Council Fight <span class="role-tag all">All</span></h4>
-                        <p>Fight against Delrissa + 4 random adds. CC and focus priority targets.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jellyfish_blue.jpg"
+                                    class="spell-icon" alt="">Triplicate <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p>Harc elején és 50% HP-nál két kisebb klónt idéz, amik a harc végéig megmaradnak.
+                            <strong>Közös HP pooluk van</strong> — spread cleave ideális.
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Flash Heal <span class="role-tag dps">DPS</span></h4>
-                        <p>Interrupt her heals! She will heal herself and allies.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_starfall.jpg"
+                                    class="spell-icon" alt="">Cosmic Sting <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Több játékost céloz 4 másodperces magic DoT-tal, ami lejártakor tócsát hagy. A tócsákat
+                            <strong>a szoba széléhez vidd</strong>, ne a közepébe!
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Adds Priority <span class="role-tag all">All</span></h4>
-                        <p>Kill order varies by comp. Generally: Healer > Mage > Rogue > Others > Delrissa last.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_mindshear.jpg"
+                                    class="spell-icon" alt="">Neural Link <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Egy játékost összeköt egy medúzával, ami <strong>20% absorb pajzsot</strong> ad a medúzának
+                            és a játékos <strong>20% extra sebzést</strong> kap. <strong>Fuss a medúzához</strong> a
+                            link megszakításához és a pajzs eltávolításához!</p>
                     </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_soulleech_3.jpg"
+                                    class="spell-icon" alt="">⚠️ Ash Grasp <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Az összes játékost a bosshoz húzza és 8 másodpercig nehéz magic DoT sebzést okoz. A
+                            <strong>bosshoz érés halálos sebzést okoz!</strong> Használj movement és speed
+                            cooldownokat a meneküléshez!
+                        </p>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
 
-            <!-- Boss 4 -->
+            <!-- Boss 4: Degentrius -->
             <div class="boss-card">
                 <div class="boss-header" onclick="toggleBoss(this)">
                     <span class="boss-number">4</span>
-                    <h3>Kael'thas Sunstrider</h3>
+                    <h3>Degentrius</h3>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1260126-degentrius.jpg"
+                        class="boss-portrait" alt="Degentrius - Final Boss">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Végső boss
+                        "röplabda" mechanikával. A szoba 4 quadránsra oszlik — minden quadránsban kell valaki.</p>
+
                     <div class="ability">
-                        <h4>Pyroblast <span class="role-tag all">All</span></h4>
-                        <p>MUST interrupt. Deals massive damage if it goes off.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadesofdarkness.jpg"
+                                    class="spell-icon" alt="">Void Torrents <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Harc elején 4 void torrent spawno, ami <strong>4 quadránsra osztja a szobát</strong>. A
+                            torrentben állás 5 másodperces stunt és letális sebzést okoz — <strong>be vagy záródva a
+                                quadránsodba</strong>. Pull előtt szóródjatok szét!</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Flamestrike <span class="role-tag all">All</span></h4>
-                        <p>Large fire zone - move out immediately.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_seedofdestruction.jpg"
+                                    class="spell-icon" alt="">⚠️ Instable Void Essence <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>"Röplabda" mechanika — a boss egy pattogó gömböt dob, amit <strong>soakolni kell</strong>
+                            mielőtt földet ér, különben hatalmas sebzés. Soakolás 4 másodperces magic DoT-ot okoz,
+                            és a gömb másik quadránsba pattan.</p>
                     </div>
+
                     <div class="ability">
-                        <h4>Phoenix <span class="role-tag dps">DPS</span></h4>
-                        <p>Kill the Phoenix, then kill the egg before it respawns!</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_devouringplague.jpg"
+                                    class="spell-icon" alt="">Devouring Entropy <span
+                                    class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>20 másodperces dispellelhető magic debuff. Dispelkor gömbök indulnak, amiket dodgolni kell.
+                            <strong>Dispelleld cooldownon</strong> a harc során!
+                        </p>
                     </div>
+
                     <div class="ability">
-                        <h4>Gravity Lapse <span class="role-tag all">All</span></h4>
-                        <p>Everyone floats! Avoid the orbs while airborne and wait it out.</p>
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_deathwing_shrapnel.jpg"
+                                    class="spell-icon" alt="">Hulking Fragment <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Erős magic tank buster AoE a tank körül — mások beleállása valószínűleg halál. Használj
+                            defensiveket! Ez átfedhet a röplabda soakolással — koordináld a healerrel.</p>
                     </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </section>
 
         <!-- Trash Section -->
         <section class="trash-section" style="margin-top: 3rem;">
-            <h3 class="section-title">Notable Trash</h3>
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Első szoba</h4>
             <div class="trash-grid">
                 <div class="trash-card">
-                    <h4>Sunblade Mage Guard</h4>
-                    <p>Interrupt <strong>Glaive Throw</strong> - hits hard on random targets.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_arcane02.jpg"
+                            class="mob-icon" alt="">Arcane Sentry</h4>
+                    <p><strong>Ethereal Shackles:</strong> Rootol magic debuffjal — dispelleld vagy movement
+                        ability-vel távolítsd el. <strong>Arcane Beam:</strong> Egy játékosra fókuszál — defensive vagy
+                        extra heal szükséges. <strong>Crowd Dispersal:</strong> Groupwide AoE, nagyon erős M+-on.</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Sunblade Warlock</h4>
-                    <p>Interrupt <strong>Incinerate</strong>. Also summons imps - cleave them down.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_arcanepotency.jpg"
+                            class="mob-icon" alt="">Arcane Magisters</h4>
+                    <p><strong>Polymorph:</strong> Játékosokat birkává változtat — dispellelhető magic debuff. Állandóan
+                        bolt sebzést okoz. Egész dungeonban megjelennek.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Könyvtár labirintus</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_studentofmagic.jpg"
+                            class="mob-icon" alt="">Mozgó körök & Textbook</h4>
+                    <p>Mozgó körök stunolnak és visszaraknak a kezdőpontra ha eltalálnak. A <strong>Textbook</strong> a
+                        közepén spawnolja és <strong>10% haste buffot</strong> ad halálig. Halál után elveszíted —
+                        drága!</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Coilskar Witch</h4>
-                    <p><strong>Forked Lightning</strong> is nasty. Interrupt or spread out.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_misc_book_09.jpg" class="mob-icon"
+                            alt="">Animated Codex</h4>
+                    <p><strong>Staggereld a pullokat!</strong> Túl sok egyszerre (10-12) letális groupwide AoE-t okoz.
+                        Húzd őket kisebb csoportokban.</p>
                 </div>
                 <div class="trash-card">
-                    <h4>Ethereum Smuggler</h4>
-                    <p>Can stealth and ambush. Watch your backs in hallways.</p>
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_fireball02.jpg"
+                            class="mob-icon" alt="">Pyromancer</h4>
+                    <p><strong>Pyroblast:</strong> Letális cast — <strong>szakítani KELL</strong>. Ritkán castol, szóval
+                        solo kick elég.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_fire_immolation.jpg"
+                            class="mob-icon" alt="">Ignition</h4>
+                    <p>Nem dispellelhető fire DoT-ot alkalmaz és láng tócsákat hagy a földön — kerüld el őket!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_pet_worm_lightblue.jpg"
+                            class="mob-icon" alt="">Brightscale Worms</h4>
+                    <p>Halálkor <strong>felrobban</strong>. Más AoE sebzéssel átfedve wipe-ot okozhat — figyeld a
+                        timinget.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Boss 2 előtt</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_glaive_1h_npc_d_02.jpg"
+                            class="mob-icon" alt="">Rune Spellbreaker</h4>
+                    <p><strong>Rune Glaive:</strong> Ricocheteló sebzés a közelben álló party tagok között —
+                        <strong>szóródjatok szét!</strong> Shield slam frontálisa van — dodgold.
+                    </p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Boss 3 előtt (Void terület)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowmend.jpg"
+                            class="mob-icon" alt="">Shadow Rift Void Callers</h4>
+                    <p>Mini bossok, amelyek periodikusan addokat idéznek. A tank gyorsan szedje fel az aggrót, a csoport
+                        cleave-elje le őket. <strong>Consuming Shadows:</strong> Partywide sebzés 4 másodpercig.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_unholyfrenzy.jpg"
+                            class="mob-icon" alt="">Void Infusers</h4>
+                    <p><strong>Void Surge:</strong> Fear az egész partyn ha nem szakítják meg — <strong>KICKELNI
+                            KELL</strong> a kaotikus pullok elkerüléséhez!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_devourmagic.jpg"
+                            class="mob-icon" alt="">Devouring Tyrant</h4>
+                    <p><strong>Devouring Strike:</strong> Gyakori tank buster 15 másodpercenként. Magas prioritás a
+                        tank túlélése érdekében — öld meg gyorsan!</p>
                 </div>
             </div>
         </section>
 
         <!-- Tips -->
         <div class="tips-box">
-            <h4>💡 Quick Tips</h4>
+            <h4>💡 Gyors Tippek</h4>
             <ul>
-                <li>Use Bloodlust on Kael'thas - fight has a lot going on</li>
-                <li>Priestess Delrissa is the hardest boss - save cooldowns</li>
-                <li>Many trash packs can be skipped with careful pulls</li>
+                <li>Első boss előtt <strong>tisztíts legalább egy oldalt</strong> a boss szobából a hely miatt</li>
+                <li>Arcanotron Custónál <strong>tankolj fal mellett</strong>, hogy csak 3 irányból jöjjenek gömbök</li>
+                <li>Seranel Sunlashnál <strong>staggereld a Runic Mark eltávolítást</strong> — ne egyszerre!</li>
+                <li>Gemellusnál a <strong>bosshoz érés halálos</strong> Ash Grasp alatt — menekülj!</li>
+                <li>Degentriusnál <strong>szóródjatok szét pull előtt</strong> a 4 quadráns lefedéséhez</li>
+                <li>A könyvtár labirintusban a <strong>Textbook 10% haste buffot</strong> ad — ne halj meg utána!</li>
+                <li>Animated Codexeket <strong>staggereld</strong> — túl sok egyszerre wipe</li>
+                <li>Boss 3 terület 5 caster + 2 mini boss — <strong>oszd fel 2-3 pullra</strong></li>
             </ul>
         </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Arcanotron Custo</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Refueling Protocol gömbök, Ethereal
+                                Shackles dispel</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Tankolj fal mellett, oszd el a
+                                soakolást</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Seranel Sunlash</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Runic Mark (zónában távolítsd el),
+                                Vow of Silence</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Staggereld a mark eltávolítást,
+                                zónába Vow alatt</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Gemellus</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1 → 3</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Triplicate klónok, Neural Link, Ash
+                                Grasp pull</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Spread cleave, menekülj Ash Grasp
+                                alatt</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Degentrius</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Void Torrents quadránsok, röplabda
+                                soak</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Szóródj szét, soakold a labdát,
+                                dispel cooldownon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Guild Dungeon Resource • Midnight Season 2</p>
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
     </footer>
 
     <script>
