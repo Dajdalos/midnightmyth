@@ -1,0 +1,534 @@
+:root {
+  /* Midnight WoW Theme Colors */
+  --bg-dark: #0a0a12;
+  --bg-card: #12121f;
+  --bg-card-hover: #1a1a2e;
+  --border-glow: #6b4fd4;
+  --accent-purple: #9b7aec;
+  --accent-blue: #4fc3f7;
+  --accent-gold: #ffd54f;
+  --text-primary: #e8e8f0;
+  --text-secondary: #9898b0;
+  --text-muted: #5a5a72;
+  --danger: #ef5350;
+  --warning: #ffb74d;
+  --success: #66bb6a;
+
+  /* Shadows */
+  --glow-purple: 0 0 20px rgba(107, 79, 212, 0.3);
+  --glow-blue: 0 0 15px rgba(79, 195, 247, 0.2);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(107, 79, 212, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(180deg, rgba(18, 18, 31, 0.95) 0%, rgba(10, 10, 18, 0.9) 100%);
+  border-bottom: 1px solid rgba(107, 79, 212, 0.3);
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--glow-purple);
+}
+
+.logo-text h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(107, 79, 212, 0.15);
+  border: 1px solid rgba(107, 79, 212, 0.3);
+  border-radius: 8px;
+  color: var(--accent-purple);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-home:hover {
+  background: rgba(107, 79, 212, 0.25);
+  border-color: var(--accent-purple);
+  box-shadow: var(--glow-purple);
+}
+
+/* Main Content */
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Dungeon Grid */
+.dungeon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.dungeon-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(107, 79, 212, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dungeon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dungeon-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow), var(--glow-purple);
+}
+
+.dungeon-card:hover::before {
+  opacity: 1;
+}
+
+.dungeon-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(107, 79, 212, 0.3), rgba(79, 195, 247, 0.2));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dungeon-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.dungeon-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.dungeon-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dungeon-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Dungeon Page Styles */
+.dungeon-header {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  border-bottom: 1px solid rgba(107, 79, 212, 0.2);
+  margin-bottom: 2rem;
+}
+
+.dungeon-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dungeon-header .subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Boss Section */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-purple);
+  display: inline-block;
+}
+
+.boss-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(107, 79, 212, 0.2);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.boss-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(107, 79, 212, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boss-header:hover {
+  background: rgba(107, 79, 212, 0.15);
+}
+
+.boss-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.boss-header h3 {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.boss-header .toggle-icon {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+}
+
+.boss-card.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.boss-content {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.boss-card.active .boss-content {
+  padding: 1.5rem;
+  max-height: 2000px;
+}
+
+.ability {
+  margin-bottom: 1.25rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent-purple);
+}
+
+.ability h4 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ability p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Spell Icons */
+.spell-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(107, 79, 212, 0.4);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ability-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ability-header h4 {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Boss Portrait */
+.boss-portrait {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid rgba(107, 79, 212, 0.4);
+  box-shadow: var(--glow-purple);
+  margin-bottom: 1rem;
+  float: right;
+  margin-left: 1.5rem;
+}
+
+/* Dungeon Header Banner */
+.dungeon-banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(107, 79, 212, 0.3);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Trash mob icons */
+.trash-card .mob-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 183, 77, 0.4);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.ability .role-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-tag.tank {
+  background: rgba(79, 195, 247, 0.2);
+  color: var(--accent-blue);
+}
+
+.role-tag.healer {
+  background: rgba(102, 187, 106, 0.2);
+  color: var(--success);
+}
+
+.role-tag.dps {
+  background: rgba(239, 83, 80, 0.2);
+  color: var(--danger);
+}
+
+.role-tag.all {
+  background: rgba(255, 183, 77, 0.2);
+  color: var(--warning);
+}
+
+/* Trash Section */
+.trash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trash-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(107, 79, 212, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.trash-card h4 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trash-card h4::before {
+  content: '⚠';
+  font-size: 0.9rem;
+}
+
+.trash-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Tips Box */
+.tips-box {
+  background: rgba(255, 183, 77, 0.1);
+  border: 1px solid rgba(255, 183, 77, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 2rem;
+}
+
+.tips-box h4 {
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tips-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tips-box li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.tips-box li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(107, 79, 212, 0.2);
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .dungeon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+}

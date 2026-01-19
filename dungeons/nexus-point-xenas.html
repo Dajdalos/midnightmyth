@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Point Zenus - Midnight Dungeon Guide</title>
+    <meta name="description"
+        content="Teljes boss mechanikák és trash guide a Nexus Point Zenus M+ dungeonhoz - Midnight Season 1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🌙</div>
+                <div class="logo-text">
+                    <h1>Midnight Dungeon Guide</h1>
+                    <span>Season 1 M+ Reference</span>
+                </div>
+            </a>
+            <a href="../index.html" class="nav-home">← All Dungeons</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dungeon-header">
+            <h2>⚡ Nexus Point Zenus</h2>
+            <p class="subtitle">Void Nexus • 3 Boss • 30 perc timer</p>
+        </section>
+
+        <!-- Recommended Utilities Section -->
+        <section class="tips-box" style="margin-bottom: 2rem;">
+            <h4>🛡️ Ajánlott Utility Spells</h4>
+            <ul>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_curseofsargeras.jpg"
+                        class="spell-icon" alt=""><strong>Curse dispels</strong> — Elengedhetetlen az átok debuffok
+                    kezeléséhez a dungeonban</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_arcaneresilience.jpg"
+                        class="spell-icon" alt=""><strong>Magic damage resistance</strong> — Erős mágikus sebzés elleni
+                    védelem ajánlott</li>
+                <li><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_frost_iceshock.jpg"
+                        class="spell-icon" alt=""><strong>Interrupts</strong> — Sok kick szükséges a castok
+                    megszakításához</li>
+            </ul>
+        </section>
+
+        <!-- Bosses Section -->
+        <section class="bosses-section">
+            <h3 class="section-title">Boss Encounters</h3>
+
+            <!-- Boss 1: Corewarden Nysarra -->
+            <div class="boss-card active">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">1</span>
+                    <h3>Corewarden Nysarra</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1262215-corewarden-nysarra.jpg"
+                        class="boss-portrait" alt="Corewarden Nysarra">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Árnyék alapú boss
+                        addokkal. A szezon egyik legnehezebb tank busterével rendelkezik.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowstrike.jpg"
+                                    class="spell-icon" alt="">⚠️ Umbral Lash <span class="role-tag tank">Tank</span>
+                            </h4>
+                        </div>
+                        <p>Árnyék tank buster knockbackkal az utolsó csapásnál. <strong>Void Lash</strong> debuffot
+                            alkalmaz (10%-kal növeli a kapott sebzést 10 másodpercig). A szezon egyik legerősebb tank
+                            bustere — használj fő defensiveket és self-healt!</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_shadowstep.jpg"
+                                    class="spell-icon" alt="">Eclipsing Step <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Egy játékost céloz 14 yardos körrel, majd mögéjük teleportál, árnyék sebzést okozva minden
+                            közelben lévő játékosnak. A célzott játékosnak <strong>el kell mozdulnia a
+                                csoporttól</strong>.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unsummonbuilding.jpg"
+                                    class="spell-icon" alt="">Add Phase <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A boss három addot idéz: <strong>Grand Nullifiers</strong> és <strong>Dread Flails</strong>.
+                            A Nullifiers <strong>Nullify</strong>-t castol — ezt <strong>szakítani kell</strong> a nagy
+                            sebzés elkerüléséhez. Dusk Fright köröket is spawnolnak — ezekben állva félelem éri a
+                            játékost.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_surgeoflight.jpg"
+                                    class="spell-icon" alt="">⚠️ Lightscar Flare (Damage Amp Phase) <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Egy <strong>Fractured Image</strong> megjelenik és a bosshoz ugrik, 18 másodpercre
+                            stunolva azt (de az útjában lévő játékosokat is 5 másodpercre stunnolja). A stun alatt
+                            lépj be a beambe, ami <strong>300% damage buffot</strong> ad a boss ellen. Ez az
+                            optimális burst ablak — használd a cooldownokat itt! A healer cooldownok is szükségesek
+                            a holy sebzés miatt.</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Boss 2: Chief Corite Casreth -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">2</span>
+                    <h3>Kasreth Chief Corewright</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1263324-kasreth.jpg"
+                        class="boss-portrait" alt="Chief Corite Casreth">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Arcane alapú boss
+                        beam mechanikákkal. Gyorsan kell ölni, mielőtt az aréna megtelik tócsákkal.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcane01.jpg"
+                                    class="spell-icon" alt="">Layline Array <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Arcane energiasugarak kötik össze a conduitokat az arénában. Ezek átlépése
+                            <strong>halálos arcane sebzést</strong> okoz és 20% slowt alkalmaz. <strong>Kerüld el a
+                                beameket!</strong>
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcane02.jpg"
+                                    class="spell-icon" alt="">Arcane Zap <span class="role-tag dps">DPS</span></h4>
+                        </div>
+                        <p>A boss által castolt spell, amit <strong>szakítani kell</strong> a sebzés elkerüléséhez.
+                            Kick rotáció szükséges.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_arcane_invocation.jpg"
+                                    class="spell-icon" alt="">Reflex Charge <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Egy játékost céloz, másodpercenként arcane sebzést okozva. A Layline Array beamekben
+                            állva eltávolítható a debuff, de a beameket is eltávolítja. A beam kereszteződésekben
+                            állva egyszerre több beamet lehet eltávolítani.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_fire_burnout.jpg"
+                                    class="spell-icon" alt="">⚠️ Core Spark Detonation <span
+                                    class="role-tag healer">Healer</span></h4>
+                        </div>
+                        <p>100 energiánál a boss egy gömböt idéz és lecsapja, hatalmas AoE-t létrehozva, ami
+                            <strong>one-shotol</strong>. Knockbacket és <strong>Spark Burn</strong> healing absorbot
+                            is alkalmaz. A healereknek gyorsan le kell healnelniük ezt az absorbot!
+                        </p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unstableaffliction_3.jpg"
+                                    class="spell-icon" alt="">Flux Collapse <span class="role-tag all">All</span></h4>
+                        </div>
+                        <p>Törött csövekből tócsák szivárognak a padlóra, amiket el kell kerülni. Nem
+                            megakadályozható — a cél a boss gyors megölése, mielőtt az aréna megtelik.</p>
+                    </div>
+
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Boss 3: Lothraxion -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">3</span>
+                    <h3>Lothraxion</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <img src="https://wow.zamimg.com/uploads/screenshots/normal/1262217-lothraxion.jpg"
+                        class="boss-portrait" alt="Lothraxion - High Commander">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">Végső boss holy
+                        sebzéssel és image mechanikákkal. A Divine Guile mechanika hibázás esetén wipe-ot okoz.</p>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/ability_paladin_hammerofflight.jpg"
+                                    class="spell-icon" alt="">Searing Rend <span class="role-tag tank">Tank</span></h4>
+                        </div>
+                        <p>Fizikai tank buster három csapással, ami holy damage DoT-ot alkalmaz a tankra 6
+                            másodpercig. Az aréna szélére kell vinni a <strong>radiant scar</strong>-t, ami a földön
+                            marad.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_holynova.jpg"
+                                    class="spell-icon" alt="">Brilliant Dispersion <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>Három játékost céloz 8 yardos AoE-vel, ami holy sebzést és 6 másodperces DoT-ot okoz.
+                            Az AoE-ket az <strong>aréna szélére</strong> kell vinni. AoE után <strong>Fractured
+                                Images</strong> spawnolnak a helyükön.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_divinepurpose.jpg"
+                                    class="spell-icon" alt="">Fractured Images & Flicker <span
+                                    class="role-tag all">All</span></h4>
+                        </div>
+                        <p>A képmásokkal való érintkezés knockbacket és <strong>permanens DoT-ot</strong> okoz, ami
+                            sokkal nehezebbé teszi a harcot. A képmások periodikusan <strong>Flicker</strong>-elnek,
+                            új helyekre mozognak — nagy nyilak jelzik a mozgási útvonalakat.</p>
+                    </div>
+
+                    <div class="ability">
+                        <div class="ability-header">
+                            <h4><img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_greaterblessingofsanctuary.jpg"
+                                    class="spell-icon" alt="">⚠️ Divine Guile <span class="role-tag all">All</span>
+                            </h4>
+                        </div>
+                        <p>100 energiánál a boss felemelkedik és több képmás közé rejtőzik. A csoport 3
+                            másodpercenként holy sebzést kap, amíg a <strong>helyes képmást</strong> (amelyiknek
+                            <strong>NINCS szarva</strong>) nem szakítják meg. Rossz képmás megszakítása holy sebzést
+                            és 50%-kal növelt kapott sebzést okoz — ez gyakorlatilag <strong>wipe</strong>!
+                        </p>
+                    </div>
+
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" style="margin-top: 3rem;">
+            <h3 class="section-title">Fontos Trash Mobok</h3>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Kezdő terület (Lépcső)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowmend.jpg"
+                            class="mob-icon" alt="">Lingering Image</h4>
+                    <p><strong>Searing Rend:</strong> Tank buster, ami sebző nyomot hagy a földön — mozdulj ki.
+                        Frontális cleave-et is használ, amit ki kell kerülni. Ajánlott lust pull ide.</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Jobb oldali szárny (könnyebb)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_lifedrain.jpg"
+                            class="mob-icon" alt="">Dustright Herald</h4>
+                    <p><strong>Entropic Leech:</strong> Egy játékost céloz és szívja az életerejét — healer figyelem
+                        szükséges. <strong>Dark Beckoning:</strong> Party-wide AoE sebzés.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_gathershadows.jpg"
+                            class="mob-icon" alt="">Reformed Voidlings</h4>
+                    <p>Halálkor foltot hagynak, ami megpróbálja újraéleszteni a Dread Flailseket. <strong>Szakítsd meg
+                            a folt castját</strong> az aktiválás megakadályozásához.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_curseoftounges.jpg"
+                            class="mob-icon" alt="">Cursed Voidlings</h4>
+                    <p>Halálkor <strong>átkot alkalmaznak az egész csoportra</strong> — dispellni kell. Curse dispel
+                        elengedhetetlen.</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_shadowfury.jpg"
+                            class="mob-icon" alt="">Null Sentinel</h4>
+                    <p><strong>Nullwark Blast:</strong> Frontális támadás — a tank fordítsa el a csoporttól.
+                        <strong>Dread Bellow:</strong> Party-wide AoE + knockback.
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_polearm_2h_fomorflail_d_01.jpg"
+                            class="mob-icon" alt="">Dread Flail</h4>
+                    <p><strong>Void Lash:</strong> 8 másodperces frontális tank támadás késleltetéssel — kerüld a
+                        frontális területet. <strong>Flail Storm:</strong> Egy játékost fixál és whirlwind-el, absorb
+                        pajzsot is kap. A fixált játékos menekülj!</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Bal oldali szárny (nehezebb)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_blast.jpg"
+                            class="mob-icon" alt="">Cororite Arcanist</h4>
+                    <p>Kis AoE-ket alkalmaz a csoport tagjaira, amelyek pulzáló sebzést okoznak a közelben lévőknek.
+                        <strong>Szóródjatok szét!</strong>
+                    </p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/inv_misc_enggizmos_integratedcircuit_02.jpg"
+                            class="mob-icon" alt="">Flux Engineer</h4>
+                    <p>Halálkor <strong>mana battery</strong>-t hagy hátra, amit <strong>azonnal meg kell ölni</strong>,
+                        különben nagy sebzésű robbanást okoz. Prioritás!</p>
+                </div>
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_arcane_arcanetorrent.jpg"
+                            class="mob-icon" alt="">Circuit Seer</h4>
+                    <p><strong>Arcane Mana:</strong> Pulzáló party sebzés. <strong>Power Flux:</strong> AoE tócsák.
+                        Nagyon veszélyes a magas sebzés miatt — óvatosan pullolj!</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--accent-purple); margin: 1.5rem 0 1rem;">Híd (végső terület előtt)</h4>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4><img src="https://wow.zamimg.com/images/wow/icons/medium/spell_holy_surgeoflight.jpg"
+                            class="mob-icon" alt="">Radiant Swarms</h4>
+                    <p>Játékosokat fixálnak és érintkezéskor sebzést okoznak (hasonló a whirlwindhez). <strong>Kitelj
+                            vagy menekülj</strong> a fixált moboktól. CC-k (stun, vortex, binding shot) hatékonyak.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <div class="tips-box">
+            <h4>💡 Gyors Tippek</h4>
+            <ul>
+                <li>Használj <strong>lustot az első nagy trash pullnál</strong> (Lingering Image-ek a lépcsőn)</li>
+                <li>Korai pug csoportoknak a <strong>jobb oldal ajánlott</strong> — könnyebb trash, miután a
+                    cooldownok elfogytak</li>
+                <li>Prioritáld a <strong>mana battery-k megölését</strong> a Flux Engineerektől — különben wipe</li>
+                <li>Kick rotáció szükséges a Nullify és Arcane Zap castoknál</li>
+                <li>Corewarden Nysarránál a <strong>Lightscar Flare fázis</strong> az optimális burst ablak — 300%
+                    damage buff!</li>
+                <li>Lothraxionnál <strong>CSAK a szarv nélküli képmást</strong> szakítsd meg Divine Guile alatt</li>
+                <li>A bal oldali szárny sűrűbb és nehezebb — vigyázz a butt pullokra a lézerek miatt</li>
+                <li>Casreth-nél <strong>gyorsan öld a bosst</strong>, mielőtt az aréna megtelik tócsákkal és beamekkel
+                </li>
+            </ul>
+        </div>
+
+        <!-- Summary Table -->
+        <section style="margin-top: 3rem;">
+            <h3 class="section-title">Boss Összefoglaló</h3>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: rgba(107, 79, 212, 0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Boss</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Célpontok</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Fő Mechanikák</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--accent-gold);">Prioritás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Corewarden Nysarra</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1 + addok</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Umbral Lash (erős tank buster),
+                                Lightscar Flare (damage amp)</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Burst a Lightscar Flare alatt, kick
+                                Nullify</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(107, 79, 212, 0.15);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Chief Corite Casreth</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Layline Array beamek, Core Spark
+                                Detonation, Arcane Zap</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Kick rotáció, gyors heal Spark Burn
+                                után</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Lothraxion</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">1</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Divine Guile (képmás kiválasztás),
+                                Fractured Images</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">Csak a szarv nélkülit szakítsd meg!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Guild Dungeon Resource • Midnight Season 1</p>
+    </footer>
+
+    <script>
+        function toggleBoss(header) {
+            const card = header.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

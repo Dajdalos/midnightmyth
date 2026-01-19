@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algeth'ar Academy - Midnight Dungeon Guide</title>
+    <meta name="description" content="Boss mechanics and trash guide for Algeth'ar Academy M+">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🌙</div>
+                <div class="logo-text">
+                    <h1>Midnight Dungeon Guide</h1>
+                    <span>Season 2 M+ Reference</span>
+                </div>
+            </a>
+            <a href="../index.html" class="nav-home">← All Dungeons</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dungeon-header">
+            <h2>📚 Algeth'ar Academy</h2>
+            <p class="subtitle">Dragon Isles • 4 Bosses • 32 min timer</p>
+        </section>
+
+        <!-- Bosses Section -->
+        <section class="bosses-section">
+            <h3 class="section-title">Boss Encounters</h3>
+
+            <!-- Boss 1 -->
+            <div class="boss-card active">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">1</span>
+                    <h3>Vexamus</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Arcane Fissure <span class="role-tag all">All</span></h4>
+                        <p>Creates ground fissures that deal damage. Move out of the swirlies.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Mana Bombs <span class="role-tag dps">DPS</span></h4>
+                        <p>Orbs float around - kill them before they reach the boss or they empower him.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Arcane Expulsion <span class="role-tag healer">Healer</span></h4>
+                        <p>Heavy group-wide damage pulse. Be ready with healing cooldowns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 2 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">2</span>
+                    <h3>Overgrown Ancient</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Germinate <span class="role-tag all">All</span></h4>
+                        <p>Spawns Lasher adds - focus them down quickly.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Branch Out <span class="role-tag tank">Tank</span></h4>
+                        <p>Frontal cone attack. Face boss away from group.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Barkbreaker <span class="role-tag tank">Tank</span></h4>
+                        <p>Heavy tank hit. Use active mitigation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 3 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">3</span>
+                    <h3>Crawth</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Firestorm <span class="role-tag all">All</span></h4>
+                        <p>Run to the correct colored side based on debuff (fire = fire side).</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Savage Peck <span class="role-tag tank">Tank</span></h4>
+                        <p>Heavy tank damage, use defensives.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Deafening Screech <span class="role-tag healer">Healer</span></h4>
+                        <p>Pushback + damage to all. Be ready with heals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boss 4 -->
+            <div class="boss-card">
+                <div class="boss-header" onclick="toggleBoss(this)">
+                    <span class="boss-number">4</span>
+                    <h3>Echo of Doragosa</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="boss-content">
+                    <div class="ability">
+                        <h4>Astral Breath <span class="role-tag tank">Tank</span></h4>
+                        <p>Frontal breath - face away from group.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Arcane Rift <span class="role-tag all">All</span></h4>
+                        <p>Soak the orbs or massive raid damage. Spread soaking duty.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Power Vacuum <span class="role-tag all">All</span></h4>
+                        <p>Pulls everyone in, then explodes. Move out after the pull.</p>
+                    </div>
+                    <div class="ability">
+                        <h4>Overwhelming Power <span class="role-tag all">All</span></h4>
+                        <p>Stacks of arcane damage - don't cast too much in a row. Pace your abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" style="margin-top: 3rem;">
+            <h3 class="section-title">Notable Trash</h3>
+            <div class="trash-grid">
+                <div class="trash-card">
+                    <h4>Spellbound Scepter</h4>
+                    <p>Interrupt <strong>Mystic Blast</strong> at all costs. High priority interrupt target.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Corrupted Manafiend</h4>
+                    <p><strong>Mana Void</strong> does heavy group damage. Focus these down first.</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Unruly Textbook</h4>
+                    <p>Interrupt <strong>Monotonous Lecture</strong> or the group gets put to sleep!</p>
+                </div>
+                <div class="trash-card">
+                    <h4>Arcane Ravager</h4>
+                    <p><strong>Vicious Ambush</strong> leaps to random players. Healers be ready.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <div class="tips-box">
+            <h4>💡 Quick Tips</h4>
+            <ul>
+                <li>Use Bloodlust/Heroism on Echo of Doragosa (final boss)</li>
+                <li>The gauntlet between Boss 1 and 2 is timed - keep moving</li>
+                <li>Save big cooldowns for the Unruly Textbook packs</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Guild Dungeon Resource • Midnight Season 2</p>
+    </footer>
+
+    <script>
+        function toggleBoss(header) {
+            const card = header.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
